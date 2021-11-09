@@ -1,0 +1,21 @@
+.home-background{
+  background: url('/images/home-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 500px;
+}
+
+.home{
+  background-color: white;
+  opacity: 0.68;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer-background{
+  background-color: #154a00;
+  height: 180px;
+  color: white;
+}
+
