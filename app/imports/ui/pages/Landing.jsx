@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid, Header, Image } from 'semantic-ui-react';
+import { Button, Grid, Header, Image } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
@@ -13,9 +14,11 @@ class Landing extends React.Component {
             </Grid.Column>
             <Grid.Column>
               <Header as='h3'>
-                UH Mānoa student life offers exciting opportunities to establish lifelong friendships and memories you’ll never forget.
-                Balance your social and academic life by exploring the clubs and organizations that Mānoa offers.
+                  UH Mānoa student life offers exciting opportunities to establish lifelong friendships and memories you’ll never forget.
+                  Let`s balance your social and academic life by exploring the clubs and organizations that Mānoa offers!
               </Header>
+              <br/>
+              <Button color='green' size='big' as={NavLink} exact to="/signin">Let`s explore now!</Button>
             </Grid.Column>
           </Grid.Row>
         </Grid>

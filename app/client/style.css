@@ -5,12 +5,13 @@
 }
 
 .home{
-  background-color: white;
-  opacity: 0.68;
+  background-color: rgba(255,255,255,.7);
+  border-radius: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: Marker Felt, fantasy;
 }
 
 .footer-background{
