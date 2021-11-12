@@ -1,9 +1,11 @@
+.clubsInfo-background {
+  background: url('/images/home-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 500px;
+}
 .clubsInfo {
-  background-color: rgba(0, 100, 0, .3);
-  top: 10%;
-  left: 40%;
-  width: 60%;
-  height: 60%;
+  background-color: rgba(255, 255, 255, .7);
+  top: 40px;
+  position: relative;
   border-radius: 30px;
-  margin: 25px 50px 75px 100px;
 }
