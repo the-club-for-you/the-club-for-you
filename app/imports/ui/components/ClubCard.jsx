@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Image, Label } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { withRouter, NavLink } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class ClubCard extends React.Component {
@@ -25,7 +25,9 @@ class ClubCard extends React.Component {
             {this.props.club.type.map((data, index) => <Label
               key={index}
               horizontal
-              as='a'
+              as={ NavLink }
+              exact
+              to={`/clubtype/${data}`}
             >
               {data}
             </Label>)}
