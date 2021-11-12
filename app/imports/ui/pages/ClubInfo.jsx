@@ -5,22 +5,18 @@ import { Grid, Header } from 'semantic-ui-react';
 class ClubInfo extends React.Component {
   render() {
     return (
-      <Grid id='landing-page' columns={2} textAlign='center' >
+      <Grid container className='clubsInfo'>
         <Grid.Row>
-          <br/> <br/>
-          <Header as={'h1'}>Club name</Header>
-          <br/> <br/>
+          <Grid.Column>
+            <Header as={'h1'}>Clubs Name</Header>
+          </Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
-            <Header as={'h2'}>Clubs picture(?)</Header>
-          </Grid.Column>
-          <Grid.Column>
-            <Header as={'h2'}>Clubs Description</Header><hr/>
-            <Header as={'h2'}>Contact Information</Header><hr/>
+            <Header as={'h2'}>Purpose</Header>
+            <Header as={'h2'}>Contact Information</Header>
           </Grid.Column>
         </Grid.Row>
-
       </Grid>
     );
   }

@@ -1,1 +1,9 @@
-
+.clubsInfo {
+  background-color: rgba(0, 100, 0, .3);
+  top: 10%;
+  left: 40%;
+  width: 60%;
+  height: 60%;
+  border-radius: 30px;
+  margin: 25px 50px 75px 100px;
+}
