@@ -1,5 +1,5 @@
 .home-background{
-  background: url('/images/home2-background.jpg') no-repeat center center fixed;
+  background: url('/images/home-background.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 500px;
 }
@@ -8,7 +8,7 @@
   background-color: rgba(255,255,255,.7);
   border-radius: 30px;
   position: absolute;
-  top: 50%;
+  top: 350px;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: Marker Felt, fantasy;
