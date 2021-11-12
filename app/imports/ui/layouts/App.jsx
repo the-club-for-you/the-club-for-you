@@ -9,9 +9,9 @@ import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import ListClubs from '../pages/ListClubs';
 import ListClubsFilter from '../pages/ListClubsFilter';
-import ListStuffAdmin from '../pages/ListStuffAdmin';
+import ListClubsAdmin from '../pages/ListClubsAdmin';
 import AddClub from '../pages/AddClub';
-import EditStuff from '../pages/EditStuff';
+import EditClub from '../pages/EditClub';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
@@ -32,8 +32,8 @@ class App extends React.Component {
             <Route path="/clubs" component={ListClubs}/>
             <Route path="/clubtype/:type" component={ListClubsFilter}/>
             <AdminProtectedRoute path="/add" component={AddClub}/>
-            <AdminProtectedRoute path="/edit/:_id" component={EditStuff}/>
-            <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+            <AdminProtectedRoute path="/edit/:_id" component={EditClub}/>
+            <AdminProtectedRoute path="/admin" component={ListClubsAdmin}/>
             <Route component={NotFound}/>
           </Switch>
           <Footer/>

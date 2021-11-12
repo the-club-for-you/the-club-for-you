@@ -15,7 +15,12 @@ const types = [
   'religious',
   'spiritual',
   'academic',
-  'proffesional',
+  'professional',
+  'service',
+  'recreational',
+  'honorary society',
+  'ethnic',
+  'cultural',
 ];
 
 // Create a schema to specify the structure of the data to appear in the form.
