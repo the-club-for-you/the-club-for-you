@@ -46,7 +46,7 @@ export default class Signin extends React.Component {
         <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
           <Grid.Column>
             <Header as="h2" textAlign="center">
-              Welcome To The Clue For You
+              Welcome To The Club For You
             </Header>
             <p>Please use the form below to log in.</p>
             <p>If you have not opened an account on our page you will need to register and open an account.</p>
