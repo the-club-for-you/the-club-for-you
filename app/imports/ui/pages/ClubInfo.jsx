@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Header, Button, Label } from 'semantic-ui-react';
+import { Grid, Header, Label } from 'semantic-ui-react';
 
 /** A simple static component to render some text for the landing page. */
 class ClubInfo extends React.Component {
