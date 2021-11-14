@@ -3,7 +3,7 @@ import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
 import { Types } from '../types/Types';
 
-const types = Types;
+const types = Types.list;
 
 class ClubsCollection {
   constructor() {
