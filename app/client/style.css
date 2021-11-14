@@ -18,4 +18,15 @@
   height: 180px;
   color: white;
 }
+.clubsInfo-background {
+  background: url('/images/home-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 500px;
+}
+.clubsInfo {
+  background-color: rgba(255, 255, 255, .7);
+  top: 40px;
+  position: relative;
+  border-radius: 30px;
+}
 
