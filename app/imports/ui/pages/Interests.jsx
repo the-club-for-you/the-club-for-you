@@ -18,10 +18,12 @@ class ClubTypes extends React.Component {
   renderPage() {
     return (
       <Container>
+        <br/>
         <Header as="h2" textAlign="center">Types of Clubs</Header>
         <Card.Group centered itemsPerRow={6}>
           {this.props.interests.map((data) => <InterestCard key={data._id} interest={data} />)}
         </Card.Group>
+        <br/>
       </Container>
     );
   }

@@ -38,10 +38,12 @@ class ListClubsFilter extends React.Component {
     Console.log(filter);
     return (
       <Container>
+        <br/>
         <Header as="h2" textAlign="center">Clubs</Header>
         <Card.Group centered itemsPerRow={6}>
           {_.filter(this.props.clubs, function (data) { return data.type.includes(filter); }).map((data) => <ClubCard key={data._id} club={data} />)}
         </Card.Group>
+        <br/>
       </Container>
     );
   }
