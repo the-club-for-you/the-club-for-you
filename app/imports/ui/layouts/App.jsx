@@ -7,15 +7,17 @@ import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
-import ListStuff from '../pages/ListStuff';
-import ListStuffAdmin from '../pages/ListStuffAdmin';
-import AddStuff from '../pages/AddStuff';
-import EditStuff from '../pages/EditStuff';
+import ListClubs from '../pages/ListClubs';
+import ListClubsFilter from '../pages/ListClubsFilter';
+import ListClubsAdmin from '../pages/ListClubsAdmin';
+import AddClub from '../pages/AddClub';
+import EditClub from '../pages/EditClub';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import Reset from '../pages/Reset';
+import Interests from '../pages/Interests';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -30,10 +32,16 @@ class App extends React.Component {
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>
             <Route path="/resetpassword" component={Reset}/>
-            <ProtectedRoute path="/list" component={ListStuff}/>
-            <ProtectedRoute path="/add" component={AddStuff}/>
-            <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
-            <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+            <ProtectedRoute path="/list" component={ListClubs}/>
+            <ProtectedRoute path="/add" component={AddClub}/>
+            <ProtectedRoute path="/edit/:_id" component={EditClub}/>
+            <AdminProtectedRoute path="/admin" component={ListClubsAdmin}/>
+            <Route path="/clubs" component={ListClubs}/>
+            <Route path="/clubtype/:type" component={ListClubsFilter}/>
+            <Route path="/clubtype" component={Interests}/>
+            <AdminProtectedRoute path="/add" component={AddClub}/>
+            <AdminProtectedRoute path="/edit/:_id" component={EditClub}/>
+            <AdminProtectedRoute path="/admin" component={ListClubsAdmin}/>
             <Route component={NotFound}/>
           </Switch>
           <Footer/>

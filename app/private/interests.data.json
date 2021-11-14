@@ -1,0 +1,52 @@
+{
+  "defaultInterests": [
+    {
+      "name": "academic",
+      "icon": "pencil alternate"
+    },
+    {
+      "name": "cultural",
+      "icon": "american sign language interpreting"
+    },
+    {
+      "name": "ethnic",
+      "icon": "globe"
+    },
+    {
+      "name": "fraternity or sorority",
+      "icon": "university"
+    },
+    {
+      "name": "honorary society",
+      "icon": "shield alternate"
+    },
+    {
+      "name": "leisure",
+      "icon": "headphones"
+    },
+    {
+      "name": "political",
+      "icon": "bullhorn"
+    },
+    {
+      "name": "professional",
+      "icon": "user md"
+    },
+    {
+      "name": "recreational",
+      "icon": "child"
+    },
+    {
+      "name": "religious",
+      "icon": "road"
+    },
+    {
+      "name": "spiritual",
+      "icon": "sun outline"
+    },
+    {
+      "name": "sports",
+      "icon": "quidditch"
+    }
+  ]
+}
