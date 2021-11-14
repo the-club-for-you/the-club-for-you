@@ -45,6 +45,7 @@ export default class Signin extends React.Component {
       <Container id="signin-page">
         <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
           <Grid.Column>
+            <br/>
             <Header as="h2" textAlign="center">
               Welcome To The Club For You
             </Header>
@@ -81,6 +82,7 @@ export default class Signin extends React.Component {
             <Message>
               <Link to="/resetpassword" position="right">Click here to Reset Password</Link>
             </Message>
+            <br/>
             {this.state.error === '' ? (
               ''
             ) : (

@@ -42,6 +42,7 @@ class Signup extends React.Component {
       <Container id="signup-page">
         <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
           <Grid.Column>
+            <br/>
             <Header as="h2" textAlign="center">
               Register your account
             </Header>
@@ -75,6 +76,7 @@ class Signup extends React.Component {
             </Message>
             <Message>Forget your password? Reset <Link to="/resetpassword" position="right">here</Link>
             </Message>
+            <br/>
             {this.state.error === '' ? (
               ''
             ) : (

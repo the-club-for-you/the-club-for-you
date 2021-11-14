@@ -18,10 +18,12 @@ class MyClubs extends React.Component {
   renderPage() {
     return (
       <Container>
+        <br/>
         <Header as="h2" textAlign="center">My Clubs</Header>
         <Card.Group centered itemsPerRow={6}>
           {this.props.clubs.map((data) => <MyClubsCard key={data._id} club={data} />)}
         </Card.Group>
+        <br/>
       </Container>
     );
   }

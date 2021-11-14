@@ -37,14 +37,14 @@ class App extends React.Component {
             <Route path="/signout" component={Signout}/>
             <Route path="/resetpassword" component={Reset}/>
             <Route path="/clubs" component={ListClubs}/>
-            <Route path="/interest" component={Interests}/>
+            <Route path="/interests" component={Interests}/>
             <Route path="/clubtype/:type" component={ListClubsFilter}/>
             <Route path="/clubtype" component={Interests}/>
             <Route path="/contact" component={Contact}/>
             <ProtectedRoute path="/list" component={ListClubs}/>
             <ProtectedRoute path="/add" component={AddClub}/>
             <ProtectedRoute path="/edit/:_id" component={EditClub}/>
-            <AdminProtectedRoute path="/admin" component={ListClubsAdmin}/>
+            <AdminProtectedRoute path="/edit" component={ListClubsAdmin}/>
             <AdminProtectedRoute path="/add" component={AddClub}/>
             <AdminProtectedRoute path="/edit/:_id" component={EditStuff}/>
             <AdminProtectedRoute path="/edit/:_id" component={EditClub}/>
@@ -102,8 +102,8 @@ const ClubProtectedRoute = ({ component: Component, ...rest }) => (
     {...rest}
     render={(props) => {
       const isLogged = Meteor.userId() !== null;
-      const isAdmin = Roles.userIsInRole(Meteor.userId(), 'club');
-      return (isLogged && isAdmin) ?
+      const isClub = Roles.userIsInRole(Meteor.userId(), 'club');
+      return (isLogged && isClub) ?
         (<Component {...props} />) :
         (<Redirect to={{ pathname: '/signin', state: { from: props.location } }}/>
         );

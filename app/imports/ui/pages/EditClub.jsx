@@ -22,12 +22,12 @@ class EditClub extends React.Component {
 
   // On successful submit, insert the data.
   submit(data) {
-    const { name, approve, expire, type, contact, email, description, _id } = data;
+    const { name, approve, expire, type, contact, owner, description, _id } = data;
     let { photo } = data;
     if (photo == null) {
       photo = 'default';
     }
-    Clubs.collection.update(_id, { $set: { name, approve, expire, type, contact, email, description, photo } }, (error) => (error ?
+    Clubs.collection.update(_id, { $set: { name, approve, expire, type, contact, owner, description, photo } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
   }
@@ -53,6 +53,7 @@ class EditClub extends React.Component {
     return (
       <Grid container centered>
         <Grid.Column>
+          <br/>
           <Header as="h2" textAlign="center">Edit Club</Header>
           <AutoForm schema={bridge} onSubmit={data => this.submit(data)} model={this.props.doc}>
             <Segment>
@@ -66,6 +67,7 @@ class EditClub extends React.Component {
                 <DateField name='approve' label='Approved On'/>
                 <DateField name='expire' label='Expires On'/>
               </Form.Group>
+              <TextField name='owner' label='Owner (email address)'/>
               <TextField name='photo' label='Photo (url)'/>
               <LongTextField name='description' />
               <SubmitField value='Submit'/>
@@ -79,6 +81,7 @@ class EditClub extends React.Component {
               <ErrorsField/>
             </Segment>
           </AutoForm>
+          <br/>
         </Grid.Column>
       </Grid>
     );

@@ -18,7 +18,7 @@ const formSchema = new SimpleSchema({
   type: { type: Array, optional: false },
   'type.$': { type: String, allowedValues: types },
   contact: String,
-  email: String,
+  owner: String,
   description: String,
   photo: { type: String, optional: true },
 });
@@ -30,12 +30,12 @@ class AddClub extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { name, approve, expire, type, contact, email, description } = data;
+    const { name, approve, expire, type, contact, owner, description } = data;
     let { photo } = data;
     if (photo == null) {
       photo = 'default';
     }
-    Clubs.collection.insert({ name, approve, expire, type, contact, email, description, photo },
+    Clubs.collection.insert({ name, approve, expire, type, contact, owner, description, photo },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -52,7 +52,8 @@ class AddClub extends React.Component {
     return (
       <Grid container centered>
         <Grid.Column>
-          <Header as="h2" textAlign="center">Add Stuff</Header>
+          <br/>
+          <Header as="h2" textAlign="center">Add a New Club</Header>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
             <Segment>
               <TextField name='name' label='Title of Club' />
@@ -65,12 +66,14 @@ class AddClub extends React.Component {
                 <DateField name='approve' label='Approved On'/>
                 <DateField name='expire' label='Expires On'/>
               </Form.Group>
+              <TextField name='owner' label='Owner (email address)'/>
               <TextField name='photo' label='Photo (url)'/>
               <LongTextField name='description' />
               <SubmitField value='Submit'/>
               <ErrorsField/>
             </Segment>
           </AutoForm>
+          <br/>
         </Grid.Column>
       </Grid>
     );

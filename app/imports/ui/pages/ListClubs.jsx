@@ -18,10 +18,12 @@ class ListClubs extends React.Component {
   renderPage() {
     return (
       <Container>
+        <br/>
         <Header as="h2" textAlign="center">Clubs</Header>
         <Card.Group centered itemsPerRow={6}>
           {this.props.clubs.map((data) => <ClubCard key={data._id} club={data} />)}
         </Card.Group>
+        <br/>
       </Container>
     );
   }

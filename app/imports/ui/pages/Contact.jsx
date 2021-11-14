@@ -7,6 +7,7 @@ class ContactUs extends React.Component {
   render() {
     return (
       <Container>
+        <br/>
         <Header as="h2">
           Contact Us
           <hr/>
@@ -30,6 +31,7 @@ class ContactUs extends React.Component {
           <p>The website is still under development, please provide any issues encounted or suggestions. Thanks for building the club community better :)</p>
           <Button href="https://the-club-for-you.github.io/">Community Feedback(Coming Soon)</Button>
         </div>
+        <br/>
       </Container>
     );
   }
