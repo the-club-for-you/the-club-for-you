@@ -34,6 +34,7 @@ class App extends React.Component {
             <Route path="/signout" component={Signout}/>
             <Route path="/resetpassword" component={Reset}/>
             <Route path="/clubs" component={ListClubs}/>
+            <Route path="/interest" component={Interests}/>
             <Route path="/clubtype/:type" component={ListClubsFilter}/>
             <Route path="/clubtype" component={Interests}/>
             <Route path="/contact" component={Contact}/>
