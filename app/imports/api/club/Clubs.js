@@ -1,22 +1,9 @@
 import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
+import { Types } from '../types/Types';
 
-const types = [
-  'sports',
-  'leisure',
-  'political',
-  'fraternity/sorority',
-  'religious',
-  'spiritual',
-  'academic',
-  'professional',
-  'service',
-  'recreational',
-  'honorary society',
-  'ethnic',
-  'cultural',
-];
+const types = Types.list;
 
 class ClubsCollection {
   constructor() {
