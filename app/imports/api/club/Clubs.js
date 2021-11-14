@@ -2,6 +2,22 @@ import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
 
+const types = [
+  'sports',
+  'leisure',
+  'political',
+  'fraternity/sorority',
+  'religious',
+  'spiritual',
+  'academic',
+  'professional',
+  'service',
+  'recreational',
+  'honorary society',
+  'ethnic',
+  'cultural',
+];
+
 class ClubsCollection {
   constructor() {
     // The name of this collection.
@@ -13,7 +29,8 @@ class ClubsCollection {
       name: String,
       approve: Date,
       expire: Date,
-      type: [String],
+      type: { type: Array, optional: false },
+      'type.$': { type: String, allowedValues: types },
       contact: String,
       email: String,
       description: String,
