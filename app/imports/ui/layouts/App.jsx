@@ -18,6 +18,7 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import Reset from '../pages/Reset';
 import Interests from '../pages/Interests';
+import Contact from '../pages/Contact';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -32,13 +33,14 @@ class App extends React.Component {
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>
             <Route path="/resetpassword" component={Reset}/>
+            <Route path="/clubs" component={ListClubs}/>
+            <Route path="/clubtype/:type" component={ListClubsFilter}/>
+            <Route path="/clubtype" component={Interests}/>
+            <Route path="/contact" component={Contact}/>
             <ProtectedRoute path="/list" component={ListClubs}/>
             <ProtectedRoute path="/add" component={AddClub}/>
             <ProtectedRoute path="/edit/:_id" component={EditClub}/>
             <AdminProtectedRoute path="/admin" component={ListClubsAdmin}/>
-            <Route path="/clubs" component={ListClubs}/>
-            <Route path="/clubtype/:type" component={ListClubsFilter}/>
-            <Route path="/clubtype" component={Interests}/>
             <AdminProtectedRoute path="/add" component={AddClub}/>
             <AdminProtectedRoute path="/edit/:_id" component={EditClub}/>
             <AdminProtectedRoute path="/admin" component={ListClubsAdmin}/>
