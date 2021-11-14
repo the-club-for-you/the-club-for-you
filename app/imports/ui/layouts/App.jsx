@@ -19,6 +19,7 @@ import Signout from '../pages/Signout';
 import Reset from '../pages/Reset';
 import Interests from '../pages/Interests';
 import Contact from '../pages/Contact';
+import ClubInfo from '../pages/ClubInfo';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -38,6 +39,7 @@ class App extends React.Component {
             <Route path="/clubtype/:type" component={ListClubsFilter}/>
             <Route path="/clubtype" component={Interests}/>
             <Route path="/contact" component={Contact}/>
+            <Route path="/clubsInfo/:_id" component={ClubInfo}/>
             <ProtectedRoute path="/list" component={ListClubs}/>
             <ProtectedRoute path="/add" component={AddClub}/>
             <ProtectedRoute path="/edit/:_id" component={EditClub}/>

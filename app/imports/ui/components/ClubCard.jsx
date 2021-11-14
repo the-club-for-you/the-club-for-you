@@ -10,7 +10,7 @@ class ClubCard extends React.Component {
       this.props.club.photo = '/images/UH-logo.jpg';
     }
     return (
-      <Card>
+      <Card as={NavLink} activeClassName="active" exact to={`/clubsInfo/${this.props.club._id}`}>
         <Image src={this.props.club.photo} wrapped ui={false} />
         <Card.Content>
           <Card.Header>{this.props.club.name}</Card.Header>
