@@ -3,7 +3,6 @@ import { Card, Icon } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, NavLink } from 'react-router-dom';
 
-
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class InterestCard extends React.Component {
 

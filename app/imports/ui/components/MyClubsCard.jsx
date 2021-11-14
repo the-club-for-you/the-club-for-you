@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { withRouter, NavLink, Link } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
-class ClubCardAdmin extends React.Component {
+class MyClubsCard extends React.Component {
   render() {
     if (this.props.club.photo === 'default') {
       this.props.club.photo = '/images/UH-logo.jpg';
@@ -34,7 +34,7 @@ class ClubCardAdmin extends React.Component {
           </Label.Group>
         </Card.Content>
         <Card.Content extra>
-          <Link to={`/edit/${this.props.club._id}`}>Edit</Link>
+          <Link to={`myclubs/edit/${this.props.club._id}`}>Edit</Link>
         </Card.Content>
       </Card>
     );
@@ -42,7 +42,7 @@ class ClubCardAdmin extends React.Component {
 }
 
 // Require a document to be passed to this component.
-ClubCardAdmin.propTypes = {
+MyClubsCard.propTypes = {
   club: PropTypes.shape({
     name: PropTypes.string,
     photo: PropTypes.string,
@@ -54,4 +54,4 @@ ClubCardAdmin.propTypes = {
 };
 
 // Wrap this component in withRouter since we use the <Link> React Router element.
-export default withRouter(ClubCardAdmin);
+export default withRouter(MyClubsCard);

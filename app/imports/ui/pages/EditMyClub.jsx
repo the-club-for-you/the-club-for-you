@@ -12,7 +12,7 @@ import MultiSelectField from '../../forms/controllers/MultiSelectField';
 const bridge = new SimpleSchema2Bridge(Clubs.schema);
 
 /** Renders the Page for editing a single document. */
-class EditClub extends React.Component {
+class EditMyClub extends React.Component {
 
   state = { open: false }
 
@@ -86,7 +86,7 @@ class EditClub extends React.Component {
 }
 
 // Require the presence of a Stuff document in the props object. Uniforms adds 'model' to the props, which we use.
-EditClub.propTypes = {
+EditMyClub.propTypes = {
   doc: PropTypes.object,
   model: PropTypes.object,
   ready: PropTypes.bool.isRequired,
@@ -106,4 +106,4 @@ export default withTracker(({ match }) => {
     doc,
     ready,
   };
-})(EditClub);
+})(EditMyClub);

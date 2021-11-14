@@ -1,22 +1,9 @@
 import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
+import { Types } from '../types/Types';
 
-const types = [
-  'sports',
-  'leisure',
-  'political',
-  'fraternity/sorority',
-  'religious',
-  'spiritual',
-  'academic',
-  'professional',
-  'service',
-  'recreational',
-  'honorary society',
-  'ethnic',
-  'cultural',
-];
+const types = Types;
 
 class ClubsCollection {
   constructor() {
@@ -35,6 +22,7 @@ class ClubsCollection {
       email: String,
       description: String,
       photo: String,
+      owner: { type: String, optional: true },
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);

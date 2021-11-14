@@ -11,12 +11,15 @@ import ListClubs from '../pages/ListClubs';
 import ListClubsFilter from '../pages/ListClubsFilter';
 import ListClubsAdmin from '../pages/ListClubsAdmin';
 import AddClub from '../pages/AddClub';
+import EditStuff from '../pages/EditStuff';
 import EditClub from '../pages/EditClub';
+import EditMyClub from '../pages/EditMyClub';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import Interests from '../pages/Interests';
+import MyClubs from '../pages/MyClubs';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -34,8 +37,11 @@ class App extends React.Component {
             <Route path="/clubtype/:type" component={ListClubsFilter}/>
             <Route path="/clubtype" component={Interests}/>
             <AdminProtectedRoute path="/add" component={AddClub}/>
+            <AdminProtectedRoute path="/edit/:_id" component={EditStuff}/>
             <AdminProtectedRoute path="/edit/:_id" component={EditClub}/>
             <AdminProtectedRoute path="/admin" component={ListClubsAdmin}/>
+            <ClubProtectedRoute path="/myclubs/edit/:_id" component={EditMyClub}/>
+            <ClubProtectedRoute path="/myclubs" component={MyClubs}/>
             <Route component={NotFound}/>
           </Switch>
           <Footer/>
@@ -82,6 +88,20 @@ const AdminProtectedRoute = ({ component: Component, ...rest }) => (
   />
 );
 
+const ClubProtectedRoute = ({ component: Component, ...rest }) => (
+  <Route
+    {...rest}
+    render={(props) => {
+      const isLogged = Meteor.userId() !== null;
+      const isAdmin = Roles.userIsInRole(Meteor.userId(), 'club');
+      return (isLogged && isAdmin) ?
+        (<Component {...props} />) :
+        (<Redirect to={{ pathname: '/signin', state: { from: props.location } }}/>
+        );
+    }}
+  />
+);
+
 // Require a component and location to be passed to each ProtectedRoute.
 ProtectedRoute.propTypes = {
   component: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
@@ -90,6 +110,11 @@ ProtectedRoute.propTypes = {
 
 // Require a component and location to be passed to each AdminProtectedRoute.
 AdminProtectedRoute.propTypes = {
+  component: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
+  location: PropTypes.object,
+};
+
+ClubProtectedRoute.propTypes = {
   component: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
   location: PropTypes.object,
 };

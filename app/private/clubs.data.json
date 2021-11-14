@@ -11,7 +11,8 @@
       "contact": "Timothy Halliday",
       "email": "halliday@hawaii.edu",
       "description": "To practice Aikido",
-      "photo": "default"
+      "photo": "default",
+      "owner": "aikidoatuh@foo.com"
     },
     {
       "name": "Alohathon Dance Marathon",
