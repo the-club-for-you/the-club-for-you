@@ -46,8 +46,10 @@ export default class Signin extends React.Component {
         <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
           <Grid.Column>
             <Header as="h2" textAlign="center">
-              Login to your account
+              Welcome To The Club For You
             </Header>
+            <p>Please use the form below to log in.</p>
+            <p>If you have not opened an account on our page you will need to register and open an account.</p>
             <Form onSubmit={this.submit}>
               <Segment stacked>
                 <Form.Input
@@ -75,6 +77,9 @@ export default class Signin extends React.Component {
             </Form>
             <Message>
               <Link to="/signup">Click here to Register</Link>
+            </Message>
+            <Message>
+              <Link to="/resetpassword" position="right">Click here to Reset Password</Link>
             </Message>
             {this.state.error === '' ? (
               ''
