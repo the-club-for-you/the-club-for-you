@@ -1,10 +1,20 @@
 import { Meteor } from 'meteor/meteor';
 import { Clubs } from '../../api/club/Clubs';
+import { Interests } from '../../api/interest/Interests';
+import { Types } from '../../api/types/Types';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
 Meteor.publish(Clubs.userPublicationName, function () {
   return Clubs.collection.find();
+});
+
+Meteor.publish(Interests.userPublicationName, function () {
+  return Interests.collection.find();
+});
+
+Meteor.publish(Types.userPublicationName, function () {
+  return Types.collection.find();
 });
 
 // alanning:roles publication

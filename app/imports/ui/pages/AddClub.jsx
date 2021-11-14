@@ -5,23 +5,10 @@ import swal from 'sweetalert';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
 import { Clubs } from '../../api/club/Clubs';
+import { Types } from '../../api/types/Types';
 import MultiSelectField from '../../forms/controllers/MultiSelectField';
 
-const types = [
-  'sports',
-  'leisure',
-  'political',
-  'fraternity/sorority',
-  'religious',
-  'spiritual',
-  'academic',
-  'professional',
-  'service',
-  'recreational',
-  'honorary society',
-  'ethnic',
-  'cultural',
-];
+const types = Types.list;
 
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
