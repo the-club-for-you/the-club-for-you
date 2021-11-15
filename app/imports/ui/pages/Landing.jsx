@@ -14,7 +14,7 @@ class Landing extends React.Component {
             <Grid.Column>
               <Header as='h3'>
                 UH Mānoa student life offers exciting opportunities to establish lifelong friendships and memories you’ll never forget.
-                Balance your social and academic life by exploring the clubs and organizations that Mānoa offers.
+                Let`s balance your social and academic life by exploring the clubs and organizations that Mānoa offers today!
               </Header>
             </Grid.Column>
           </Grid.Row>

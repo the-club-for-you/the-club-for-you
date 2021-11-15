@@ -5,12 +5,12 @@
 }
 
 .home{
-  background-color: white;
-  opacity: 0.68;
+  background-color: rgba(255, 255, 255, .7);
   position: absolute;
   top: 350px;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 30px;
 }
 
 .footer-background{
@@ -21,12 +21,17 @@
 .clubsInfo-background {
   background: url('/images/home-background.jpg') no-repeat center center fixed;
   background-size: cover;
-  height: 500px;
+  height: 650px;
+  margin-top: 14px;
 }
 .clubsInfo {
-  background-color: rgba(255, 255, 255, .7);
+  background-color: rgba(255, 255, 255, .9);
   top: 40px;
   position: relative;
   border-radius: 30px;
+  height: 500px;
+}
+.informations{
+  margin-left: 20px;
 }
 

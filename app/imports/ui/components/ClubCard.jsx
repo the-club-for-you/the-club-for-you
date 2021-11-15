@@ -11,8 +11,8 @@ class ClubCard extends React.Component {
     }
     return (
       <Card>
-        <Image src={this.props.club.photo} wrapped ui={false} />
-        <Card.Content>
+        <Image src={this.props.club.photo} wrapped ui={false} as={NavLink} to={`/clubsInfo/${this.props.club._id}`}/>
+        <Card.Content as={NavLink} to={`/clubsInfo/${this.props.club._id}`}>
           <Card.Header>{this.props.club.name}</Card.Header>
           <Card.Meta>
             {this.props.club.approve.toLocaleDateString('en-US').substr(this.props.club.approve.toLocaleDateString('en-US').length - 4, 4)}
