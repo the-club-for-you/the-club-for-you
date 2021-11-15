@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Header, Label, Loader } from 'semantic-ui-react';
+import { Container, Grid, Header, Label, Loader } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
@@ -38,7 +38,7 @@ class ClubInfo extends React.Component {
     return (
       <div className="clubsInfo-background">
         <Grid container id='landing-page' verticalAlign="middle" className="clubsInfo" schema={bridge} onSubmit={data => this.read(data)} model={this.props.doc}>
-          <div className='informations'>
+          <Container className='informations'>
             <Grid.Row>
               <br/>
               <Header as='h1'>{this.props.doc.name}</Header>
@@ -70,7 +70,7 @@ class ClubInfo extends React.Component {
                 <li><Header as='h4'>Contact Person`s Email:</Header> {this.props.doc.email}</li>
               </ul>
             </Grid.Row>
-          </div>
+          </Container>
         </Grid>
       </div>
     );
