@@ -20,6 +20,7 @@ const formSchema = new SimpleSchema({
   contact: String,
   owner: String,
   description: String,
+  email: String,
   photo: { type: String, optional: true },
 });
 
@@ -30,12 +31,12 @@ class AddClub extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { name, approve, expire, type, contact, owner, description } = data;
+    const { name, approve, expire, type, contact, owner, description, email } = data;
     let { photo } = data;
     if (photo == null) {
       photo = 'default';
     }
-    Clubs.collection.insert({ name, approve, expire, type, contact, owner, description, photo },
+    Clubs.collection.insert({ name, approve, expire, type, contact, owner, description, photo, email },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
