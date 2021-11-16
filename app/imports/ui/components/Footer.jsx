@@ -11,9 +11,9 @@ class Footer extends React.Component {
           <hr /> <br/>
           <Grid container inverted className={'ui centered grid container'}>
             <Grid.Row>
-              <Icon size='large' className={'facebook'}/>
-              <Icon size='large' className={'instagram'}/>
-              <Icon size='large' className={'twitter'}/>
+              <a href="https://www.facebook.com/uhmanoa/"><Icon size='large' className={'inverted facebook'}/></a>
+              <a href="https://www.instagram.com/uhmanoanews/"><Icon size='large' className={'inverted instagram'}/></a>
+              <a href="https://twitter.com/uhmanoa"><Icon size='large' className={'inverted twitter'}/></a>
             </Grid.Row>
             <Grid.Row>
               University of Hawaiʻi at Mānoa <br />
