@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, Redirect } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
-import { Container, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
+import { Button, Confirm, Container, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
+import { AutoForm, DateField, ErrorsField, LongTextField, SubmitField, TextField } from 'uniforms-semantic';
+import MultiSelectField from '../../forms/controllers/MultiSelectField';
 
 /**
  * Signin page overrides the form’s submit event and call Meteor’s loginWithPassword().
@@ -42,59 +44,61 @@ export default class Signin extends React.Component {
     }
     // Otherwise return the Login form.
     return (
-      <Container id="signin-page">
-        <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
-          <Grid.Column>
-            <br/>
-            <Header as="h2" textAlign="center">
-              Welcome To The Club For You
-            </Header>
-            <p>Please use the form below to log in.</p>
-            <p>If you have not opened an account on our page you will need to register and open an account.</p>
-            <Form onSubmit={this.submit}>
-              <Segment stacked>
-                <Form.Input
-                  label="Email"
-                  id="signin-form-email"
-                  icon="user"
-                  iconPosition="left"
-                  name="email"
-                  type="email"
-                  placeholder="E-mail address"
-                  onChange={this.handleChange}
+      <div id="signin-page" className='clubsInfo-background'>
+        <Container>
+          <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
+            <Grid.Column className='information'>
+              <br/>
+              <Header as="h1" textAlign="center" inverted>
+                Welcome To The Club For You
+              </Header>
+              <p>Please use the form below to log in.</p>
+              <p>If you have not opened an account on our page you will need to register and open an account.</p>
+              <Form onSubmit={this.submit}>
+                <Segment stacked>
+                  <Form.Input
+                    label="Email"
+                    id="signin-form-email"
+                    icon="user"
+                    iconPosition="left"
+                    name="email"
+                    type="email"
+                    placeholder="E-mail address"
+                    onChange={this.handleChange}
+                  />
+                  <Form.Input
+                    label="Password"
+                    id="signin-form-password"
+                    icon="lock"
+                    iconPosition="left"
+                    name="password"
+                    placeholder="Password"
+                    type="password"
+                    onChange={this.handleChange}
+                  />
+                  <Form.Button id="signin-form-submit" content="Submit"/>
+                </Segment>
+              </Form>
+              <Message>
+                <Link to="/signup">Click here to Register</Link>
+              </Message>
+              <Message>
+                <Link to="/resetpassword" position="right">Click here to Reset Password</Link>
+              </Message>
+              <br/>
+              {this.state.error === '' ? (
+                ''
+              ) : (
+                <Message
+                  error
+                  header="Login was not successful"
+                  content={this.state.error}
                 />
-                <Form.Input
-                  label="Password"
-                  id="signin-form-password"
-                  icon="lock"
-                  iconPosition="left"
-                  name="password"
-                  placeholder="Password"
-                  type="password"
-                  onChange={this.handleChange}
-                />
-                <Form.Button id="signin-form-submit" content="Submit"/>
-              </Segment>
-            </Form>
-            <Message>
-              <Link to="/signup">Click here to Register</Link>
-            </Message>
-            <Message>
-              <Link to="/resetpassword" position="right">Click here to Reset Password</Link>
-            </Message>
-            <br/>
-            {this.state.error === '' ? (
-              ''
-            ) : (
-              <Message
-                error
-                header="Login was not successful"
-                content={this.state.error}
-              />
-            )}
-          </Grid.Column>
-        </Grid>
-      </Container>
+              )}
+            </Grid.Column>
+          </Grid>
+        </Container>
+      </div>
     );
   }
 }

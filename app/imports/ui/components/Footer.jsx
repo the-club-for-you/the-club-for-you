@@ -9,7 +9,7 @@ class Footer extends React.Component {
       <footer>
         <div className="footer-background" style={divStyle}>
           <hr /> <br/>
-          <Grid container inverted className={'ui centered grid container'}>
+          <Grid container inverted className='ui centered grid container'>
             <Grid.Row>
               <a href="https://www.facebook.com/uhmanoa/"><Icon size='large' className={'inverted facebook'}/></a>
               <a href="https://www.instagram.com/uhmanoanews/"><Icon size='large' className={'inverted instagram'}/></a>

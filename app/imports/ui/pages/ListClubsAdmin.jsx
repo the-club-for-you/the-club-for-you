@@ -17,14 +17,16 @@ class ListClubsAdmin extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     return (
-      <Container>
-        <br/>
-        <Header as="h2" textAlign="center">Clubs</Header>
-        <Card.Group centered itemsPerRow={6}>
-          {this.props.clubs.map((data) => <ClubCardAdmin key={data._id} club={data} />)}
-        </Card.Group>
-        <br/>
-      </Container>
+      <div className='background'>
+        <Container>
+          <br/>
+          <Header as="h1" textAlign="center" inverted>Clubs</Header>
+          <Card.Group centered itemsPerRow={6}>
+            {this.props.clubs.map((data) => <ClubCardAdmin key={data._id} club={data} />)}
+          </Card.Group>
+          <br/>
+        </Container>
+      </div>
     );
   }
 }

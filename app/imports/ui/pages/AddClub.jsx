@@ -51,32 +51,34 @@ class AddClub extends React.Component {
   render() {
     let fRef = null;
     return (
-      <Grid container centered>
-        <Grid.Column>
-          <br/>
-          <Header as="h2" textAlign="center">Add a New Club</Header>
-          <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
-            <Segment>
-              <TextField name='name' label='Title of Club' />
-              <Form.Group widths={'equal'}>
-                <TextField name='contact' label='Main Contact Name'/>
-                <TextField name='email'/>
-              </Form.Group>
-              <Form.Group widths={'equal'}>
-                <MultiSelectField name='type' />
-                <DateField name='approve' label='Approved On'/>
-                <DateField name='expire' label='Expires On'/>
-              </Form.Group>
-              <TextField name='owner' label='Owner (email address)'/>
-              <TextField name='photo' label='Photo (url)'/>
-              <LongTextField name='description' />
-              <SubmitField value='Submit'/>
-              <ErrorsField/>
-            </Segment>
-          </AutoForm>
-          <br/>
-        </Grid.Column>
-      </Grid>
+      <div className='clubsInfo-background'>
+        <Grid container centered>
+          <Grid.Column>
+            <br/>
+            <Header as="h1" textAlign="center" inverted>Add a New Club</Header>
+            <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
+              <Segment>
+                <TextField name='name' label='Title of Club' />
+                <Form.Group widths={'equal'}>
+                  <TextField name='contact' label='Main Contact Name'/>
+                  <TextField name='email'/>
+                </Form.Group>
+                <Form.Group widths={'equal'}>
+                  <MultiSelectField name='type' />
+                  <DateField name='approve' label='Approved On'/>
+                  <DateField name='expire' label='Expires On'/>
+                </Form.Group>
+                <TextField name='owner' label='Owner (email address)'/>
+                <TextField name='photo' label='Photo (url)'/>
+                <LongTextField name='description' />
+                <SubmitField value='Submit'/>
+                <ErrorsField/>
+              </Segment>
+            </AutoForm>
+            <br/>
+          </Grid.Column>
+        </Grid>
+      </div>
     );
   }
 }

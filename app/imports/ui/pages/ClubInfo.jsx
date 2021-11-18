@@ -37,11 +37,11 @@ class ClubInfo extends React.Component {
   renderPage() {
     return (
       <div className="clubsInfo-background">
-        <Grid container id='landing-page' verticalAlign="middle" className="clubsInfo" schema={bridge} onSubmit={data => this.read(data)} model={this.props.doc}>
+        <Grid container id='landing-page' verticalAlign="middle" className="information" schema={bridge} onSubmit={data => this.read(data)} model={this.props.doc}>
           <Container className='informations'>
             <Grid.Row>
               <br/>
-              <Header as='h1'>{this.props.doc.name}</Header>
+              <Header size='huge'>{this.props.doc.name}</Header>
             </Grid.Row>
             <br/>
             <Grid.Row>
