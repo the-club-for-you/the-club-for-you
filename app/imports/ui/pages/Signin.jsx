@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, Redirect } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
-import { Button, Confirm, Container, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
-import { AutoForm, DateField, ErrorsField, LongTextField, SubmitField, TextField } from 'uniforms-semantic';
-import MultiSelectField from '../../forms/controllers/MultiSelectField';
+import { Container, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
 
 /**
  * Signin page overrides the form’s submit event and call Meteor’s loginWithPassword().
