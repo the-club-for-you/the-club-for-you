@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Card } from 'semantic-ui-react';
+import { Container, Header, Loader, Card, Input, Icon, Button } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Clubs } from '../../api/club/Clubs';
@@ -18,13 +18,20 @@ class ListClubs extends React.Component {
   renderPage() {
     return (
       <div className='background'>
-        <Container>
-          <br/>
-          <Header as={'h1'} textAlign="center" inverted>Clubs</Header>
-          <Card.Group centered itemsPerRow={6}>
-            {this.props.clubs.map((data) => <ClubCard key={data._id} club={data} />)}
-          </Card.Group>
-          <br/>
+        <Container className="information">
+          <Container style={{ paddingLeft: '30px', paddingRight: '30px' }}>
+            <br/>
+            <Header as={'h1'} textAlign="center" inverted>Clubs</Header>
+            <div style={ { marginLeft: '25%' } }>
+              <Input size="huge" style={ { width: '50%' } } type="text" placeholder="Search..."/>
+              <Button size="huge" color='green'><Icon className="search"/>Search</Button>
+            </div>
+            <br/>
+            <Card.Group centered stackable itemsPerRow={5}>
+              {this.props.clubs.map((data) => <ClubCard key={data._id} club={data} />)}
+            </Card.Group>
+            <br/>
+          </Container>
         </Container>
       </div>
     );
