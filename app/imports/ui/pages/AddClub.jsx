@@ -22,6 +22,7 @@ const formSchema = new SimpleSchema({
   description: String,
   email: String,
   photo: { type: String, optional: true },
+  website: { type: String, optional: true },
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
@@ -31,12 +32,12 @@ class AddClub extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { name, approve, expire, type, contact, owner, description, email } = data;
+    const { name, approve, expire, type, contact, owner, description, email, website } = data;
     let { photo } = data;
     if (photo == null) {
       photo = 'default';
     }
-    Clubs.collection.insert({ name, approve, expire, type, contact, owner, description, photo, email },
+    Clubs.collection.insert({ name, approve, expire, type, contact, owner, description, photo, email, website },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -51,11 +52,11 @@ class AddClub extends React.Component {
   render() {
     let fRef = null;
     return (
-      <div className='clubsInfo-background'>
+      <div className='clubs-background' style={ { marginTop: '14px' } }>
         <Grid container centered>
           <Grid.Column>
             <br/>
-            <Header as="h1" textAlign="center" inverted>Add a New Club</Header>
+            <Header style={ { fontSize: '400%' } } textAlign="center" inverted>Add a New Club</Header>
             <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
               <Segment>
                 <TextField name='name' label='Title of Club' />
@@ -70,6 +71,7 @@ class AddClub extends React.Component {
                 </Form.Group>
                 <TextField name='owner' label='Owner (email address)'/>
                 <TextField name='photo' label='Photo (url)'/>
+                <TextField name='website' label='Website (url)'/>
                 <LongTextField name='description' />
                 <SubmitField value='Submit'/>
                 <ErrorsField/>

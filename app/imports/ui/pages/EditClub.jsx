@@ -22,12 +22,12 @@ class EditClub extends React.Component {
 
   // On successful submit, insert the data.
   submit(data) {
-    const { name, approve, expire, type, contact, owner, description, _id } = data;
+    const { name, approve, expire, type, contact, owner, description, website, _id } = data;
     let { photo } = data;
     if (photo == null) {
       photo = 'default';
     }
-    Clubs.collection.update(_id, { $set: { name, approve, expire, type, contact, owner, description, photo } }, (error) => (error ?
+    Clubs.collection.update(_id, { $set: { name, approve, expire, type, contact, owner, description, photo, website } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
   }
@@ -51,11 +51,11 @@ class EditClub extends React.Component {
   // Render the form. Use Uniforms: https://github.com/vazco/uniforms
   renderPage() {
     return (
-      <div className='clubsInfo-background'>
+      <div className='clubs-background' style={ { marginTop: '14px' } }>
         <Grid container centered>
           <Grid.Column>
             <br/>
-            <Header as="h1" textAlign="center" inverted>Edit Club</Header>
+            <Header style={ { fontSize: '400%' } } textAlign="center" inverted>Edit Club</Header>
             <AutoForm schema={bridge} onSubmit={data => this.submit(data)} model={this.props.doc}>
               <Segment>
                 <TextField name='name' label='Title of Club' />
@@ -70,6 +70,7 @@ class EditClub extends React.Component {
                 </Form.Group>
                 <TextField name='owner' label='Owner (email address)'/>
                 <TextField name='photo' label='Photo (url)'/>
+                <TextField name='website' label='Website (url)'/>
                 <LongTextField name='description' />
                 <SubmitField value='Submit'/>
                 <Button type="button" basic icon='trash' color='red' floated='right' onClick={this.open}/>
