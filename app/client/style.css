@@ -8,10 +8,19 @@
 }
 
 .home{
-  background-color: rgba(255, 255, 255, .7);
+  background-color: rgba(255, 255, 255, .8);
   border-radius: 30px;
   top: 170px;
   position: relative;
+}
+
+.ui.borderless.menu{
+  height: 70px;
+  font-size: large;
+}
+
+.ui.borderless.menu .image{
+  margin: 10px 10px 10px 10px;
 }
 
 .footer-background{
@@ -19,7 +28,7 @@
   height: auto;
   color: white;
   padding-top: 14px;
-  padding-bottom: 0;
+  padding-bottom: 0px;
 }
 
 .clubsInfo-background {

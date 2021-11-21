@@ -21,26 +21,31 @@ class Reset extends React.Component {
   render() {
     let fRef = null;
     return (
-      <Container>
-        <Header textAlign='center'>Forget your password?</Header>
-        <Grid columns='2' verticalAlign='middle' container>
-          <Grid.Column>
-            <p>Enter the email address associated with your account in the text field to the right. We will then send an email to that address containing a link that will redirect you to a page where you can reset the password for your
-              account. This link will expire within sixty-four minutes of your request, when a new password reset request is sent, or the password being changed, whichever comes first.</p>
-            <p>If you do not remember the email address associated with your account, send an email to help@foo.com and one of our trained technicians will help you restore your account.</p>
-          </Grid.Column>
+      <div className='clubs-background'>
+        <br/><br/><br/>
+        <Container>
+          <Header style={{ fontSize: '400%' }} textAlign='center' inverted>Forget your password?</Header>
+          <Grid columns='2' verticalAlign='middle' container style={{ marginBottom: '100px' }}>
+            <Grid.Column style={{ color: 'white' }}>
+              <p>Enter the email address associated with your account in the text field to the right. We will then send an email to that address
+                containing a link that will redirect you to a page where you can reset the password for your
+                account. This link will expire within sixty-four minutes of your request, when a new password reset request is sent, or the password being changed, whichever comes first.</p>
+              <p>If you do not remember the email address associated with your account, send an email to help@foo.com and one of our trained technicians will help you restore your account.</p>
+            </Grid.Column>
 
-          <Grid.Column>
-            <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)}>
-              <Segment>
-                <TextField name='email'/>
-                <SubmitField value='Submit'/>
-                <ErrorsField/>
-              </Segment>
-            </AutoForm>
-          </Grid.Column>
-        </Grid>
-      </Container>
+            <Grid.Column>
+              <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)}>
+                <Segment>
+                  <TextField name='email'/>
+                  <SubmitField value='Submit'/>
+                  <ErrorsField/>
+                </Segment>
+              </AutoForm>
+            </Grid.Column>
+          </Grid>
+          <br/><br/><br/>
+        </Container>
+      </div>
     );
   }
 }
