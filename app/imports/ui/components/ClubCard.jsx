@@ -10,7 +10,7 @@ class ClubCard extends React.Component {
       this.props.club.photo = '/images/UH-logo.jpg';
     }
     return (
-      <Card>
+      <Card style={ { borderRadius: '25px' } }>
         <Image src={this.props.club.photo} wrapped ui={false} as={NavLink} to={`/clubsInfo/${this.props.club._id}`}/>
         <Card.Content as={NavLink} to={`/clubsInfo/${this.props.club._id}`}>
           <Card.Header>{this.props.club.name}</Card.Header>
@@ -21,7 +21,7 @@ class ClubCard extends React.Component {
           </Card.Meta>
         </Card.Content>
         <Card.Content extra>
-          <Label.Group>
+          <Label.Group size={'large'}>
             {this.props.club.type.map((data, index) => <Label
               key={index}
               horizontal

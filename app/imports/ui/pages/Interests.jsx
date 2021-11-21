@@ -17,14 +17,14 @@ class ClubTypes extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     return (
-      <div className='background'>
-        <Container>
+      <div className='clubs-background'>
+        <Container style={ { marginLeft: '25%' } }>
           <br/>
-          <Header as="h1" textAlign="center" inverted>Types of Clubs</Header>
+          <Header style={ { fontSize: '400%' } } textAlign="center" inverted>Types of Clubs</Header>
           <Card.Group centered itemsPerRow={6}>
             {this.props.interests.map((data) => <InterestCard key={data._id} interest={data} />)}
           </Card.Group>
-          <br/>
+          <br/> <br/> <br/>
         </Container>
       </div>
     );

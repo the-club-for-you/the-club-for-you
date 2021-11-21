@@ -74,10 +74,10 @@ class EditClub extends React.Component {
                 <SubmitField value='Submit'/>
                 <Button type="button" basic icon='trash' color='red' floated='right' onClick={this.open}/>
                 <Confirm
-                    open={this.state.open}
-                    content='Are you sure you want to delete this club? This cannot be undone.'
-                    onCancel={this.close}
-                    onConfirm={this.delete.bind(this)}
+                  open={this.state.open}
+                  content='Are you sure you want to delete this club? This cannot be undone.'
+                  onCancel={this.close}
+                  onConfirm={this.delete.bind(this)}
                 />
                 <ErrorsField/>
               </Segment>
