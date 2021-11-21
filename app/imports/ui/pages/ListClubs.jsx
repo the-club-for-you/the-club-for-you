@@ -31,9 +31,11 @@ class ListClubs extends React.Component {
   }
 
   // Render the page once subscriptions have been received.
+  // searchValue is what user put in the search box.
+  // findClub(clubName, allClub) return all the clubs that match the searchValue.
   renderPage() {
-    const searchFound = this.state.value;
-    Console.log(searchFound);
+    const searchValue = this.state.value;
+    Console.log(searchValue);
     function findClub(clubName, allClub) {
       const clubFound = [];
       for (let i = 0; i < allClub.length; i++) {
@@ -58,7 +60,7 @@ class ListClubs extends React.Component {
             <Input size="huge" style={ { width: '50%' } } type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search by club's name"/>
             <Button size="huge" color='green'><Icon className="search"/>Search</Button>
           </Form>
-          {findClub(searchFound, this.props.clubs)}
+          {findClub(searchValue, this.props.clubs)}
           <br/><br/><br/>
         </Container>
       </div>
