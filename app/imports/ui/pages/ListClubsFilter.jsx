@@ -55,6 +55,7 @@ class ListClubsFilter extends React.Component {
             <br/>
           </Container>
         </Container>
+        </Container>
       </div>
     );
   }
