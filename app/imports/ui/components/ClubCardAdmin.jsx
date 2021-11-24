@@ -10,7 +10,7 @@ class ClubCardAdmin extends React.Component {
       this.props.club.photo = '/images/UH-logo.jpg';
     }
     return (
-      <Card>
+      <Card style={ { borderRadius: '25px' } }>
         <Image src={this.props.club.photo} wrapped ui={false} />
         <Card.Content>
           <Card.Header>{this.props.club.name}</Card.Header>

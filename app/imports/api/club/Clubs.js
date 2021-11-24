@@ -22,6 +22,7 @@ class ClubsCollection {
       email: String,
       description: String,
       photo: String,
+      website: { type: String, optional: true },
       owner: { type: String, optional: true },
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.

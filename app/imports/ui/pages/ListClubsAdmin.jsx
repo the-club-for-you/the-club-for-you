@@ -1,13 +1,29 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Card } from 'semantic-ui-react';
+import { Container, Header, Loader, Card, Form, Input, Button, Icon } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
+import Console from 'console';
 import { Clubs } from '../../api/club/Clubs';
 import ClubCardAdmin from '../components/ClubCardAdmin';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListClubsAdmin extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: '' };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+
+  handleSubmit(event) {
+    Console.log(`${this.state.value}`);
+    event.preventDefault();
+  }
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
@@ -16,15 +32,34 @@ class ListClubsAdmin extends React.Component {
 
   // Render the page once subscriptions have been received.
   renderPage() {
+    const searchValue = this.state.value;
+    Console.log(searchValue);
+    function findClub(clubName, allClub) {
+      const clubFound = [];
+      for (let i = 0; i < allClub.length; i++) {
+        const clubs = (allClub[i].name).toUpperCase();
+        const input = clubName.toUpperCase();
+        if (clubs.includes(input)) {
+          clubFound.push(allClub[i]);
+        }
+      }
+      return <div> <br/><br/>
+        <Card.Group centered stackable itemsPerRow={5}>
+          {clubFound.map((data) => <ClubCardAdmin key={data._id} club={data} />)}
+        </Card.Group>
+      </div>;
+    }
     return (
-      <div className='background'>
+      <div className='clubs-background'>
         <Container>
           <br/>
-          <Header as="h1" textAlign="center" inverted>Clubs</Header>
-          <Card.Group centered itemsPerRow={6}>
-            {this.props.clubs.map((data) => <ClubCardAdmin key={data._id} club={data} />)}
-          </Card.Group>
-          <br/>
+          <Header style={ { fontSize: '400%' } } textAlign="center" inverted>Clubs</Header><br/>
+          <Form style={ { marginLeft: '25%' } } onSubmit={this.handleSubmit}>
+            <Input size="huge" style={ { width: '50%' } } type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search by club's name"/>
+            <Button size="huge" color='green'><Icon className="search"/>Search</Button>
+          </Form>
+          {findClub(searchValue, this.props.clubs)}
+          <br/><br/><br/>
         </Container>
       </div>
     );

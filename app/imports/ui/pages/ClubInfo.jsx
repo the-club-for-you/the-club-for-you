@@ -69,6 +69,10 @@ class ClubInfo extends React.Component {
                 <li><Header as='h4'>Contact Person:</Header> {this.props.doc.contact}</li> <br/>
                 <li><Header as='h4'>Contact Person`s Email:</Header> {this.props.doc.email}</li>
               </ul>
+              <Header as={'h3'}>
+                <a href={this.props.doc.website}> {this.props.doc.website}</a>
+              </Header>
+              <br/>
             </Grid.Row>
           </Container>
         </Grid>
