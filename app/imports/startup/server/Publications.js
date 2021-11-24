@@ -2,18 +2,19 @@ import { Meteor } from 'meteor/meteor';
 import { Clubs } from '../../api/club/Clubs';
 import { Interests } from '../../api/interest/Interests';
 import { Types } from '../../api/types/Types';
-import { ClubsOwned } from '../../api/club/ClubsOwned';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
+
 Meteor.publish(Clubs.userPublicationName, function () {
   return Clubs.collection.find();
 });
 
-Meteor.publish(ClubsOwned.userPublicationName, function () {
+// for MyClubs
+Meteor.publish(Clubs.clubPublicationName, function () {
   if (this.userId) {
     const username = Meteor.users.findOne(this.userId).username;
-    return ClubsOwned.collection.find({ owner: username });
+    return Clubs.collection.find({ owner: username });
   }
   return this.ready();
 });

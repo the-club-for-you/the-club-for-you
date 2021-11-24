@@ -37,14 +37,16 @@ class ListClubsFilter extends React.Component {
     const filter = this.state.filter;
     Console.log(filter);
     return (
-      <Container>
-        <br/>
-        <Header as="h2" textAlign="center">Clubs</Header>
-        <Card.Group centered itemsPerRow={6}>
-          {_.filter(this.props.clubs, function (data) { return data.type.includes(filter); }).map((data) => <ClubCard key={data._id} club={data} />)}
-        </Card.Group>
-        <br/>
-      </Container>
+      <div className="background">
+        <Container>
+          <br/>
+          <Header as="h1" textAlign="center" inverted>Clubs of Type: <h2 inverted>{this.props.filter}</h2></Header>
+          <Card.Group centered itemsPerRow={6}>
+            {_.filter(this.props.clubs, function (data) { return data.type.includes(filter); }).map((data) => <ClubCard key={data._id} club={data} />)}
+          </Card.Group>
+          <br/>
+        </Container>
+      </div>
     );
   }
 }
