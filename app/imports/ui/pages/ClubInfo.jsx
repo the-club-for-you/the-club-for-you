@@ -20,12 +20,12 @@ class ClubInfo extends React.Component {
 
   // On successful submit, insert the data.
   read(data) {
-    const { name, approve, expire, type, contact, email, description, _id } = data;
+    const { name, approve, expire, type, contact, email, description, website, _id } = data;
     let { photo } = data;
     if (photo == null) {
       photo = 'default';
     }
-    Clubs.collection.find(_id, { $set: { name, approve, expire, type, contact, email, description, photo } }, (error) => (error ?
+    Clubs.collection.find(_id, { $set: { name, approve, expire, type, contact, email, description, photo, website } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
   }
