@@ -11,18 +11,22 @@ import ClubCard from '../components/ClubCard';
 class ListClubs extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: '' };
+    this.state = { value: '', search: '' };
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleChange(event) {
     this.setState({ value: event.target.value });
   }
 
-  handleSubmit(event) {
-    Console.log(`${this.state.value}`);
+  handleSubmit() {
+    this.setState({ search: this.state.value });
+  }
+
+  handleClick(event) {
     event.preventDefault();
+    this.setState({ search: this.state.value });
   }
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
@@ -34,8 +38,7 @@ class ListClubs extends React.Component {
   // searchValue is what user put in the search box.
   // findClub(clubName, allClub) return all the clubs that match the searchValue.
   renderPage() {
-    const searchValue = this.state.value;
-    Console.log(searchValue);
+    const searchValue = this.state.search;
     function findClub(clubName, allClub) {
       const clubFound = [];
       for (let i = 0; i < allClub.length; i++) {
@@ -45,11 +48,17 @@ class ListClubs extends React.Component {
           clubFound.push(allClub[i]);
         }
       }
-      return <div> <br/><br/>
-        <Card.Group centered stackable itemsPerRow={5}>
-          {clubFound.map((data) => <ClubCard key={data._id} club={data} />)}
-        </Card.Group>
-      </div>;
+      if (clubFound.length === 0) {
+        return (<Header style={ { fontSize: '200%' } } inverted>No club Found.</Header>);
+      }
+
+      return (
+        <div> <br/><br/>
+          <Card.Group centered stackable itemsPerRow={5}>
+            {clubFound.map((data) => <ClubCard key={data._id} club={data} />)}
+          </Card.Group>
+        </div>
+      );
     }
     return (
       <div className='clubs-background'>
@@ -58,7 +67,7 @@ class ListClubs extends React.Component {
           <Header style={ { fontSize: '400%' } } textAlign="center" inverted>Clubs</Header>
           <Form style={ { marginLeft: '25%' } } onSubmit={this.handleSubmit}>
             <Input size="huge" style={ { width: '50%' } } type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search by club's name"/>
-            <Button size="huge" color='green'><Icon className="search"/>Search</Button>
+            <Button size="huge" color='green' onClick={this.handleClick}><Icon className="search"/>Search</Button>
           </Form>
           {findClub(searchValue, this.props.clubs)}
           <br/><br/><br/>
