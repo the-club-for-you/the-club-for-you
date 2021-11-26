@@ -61,7 +61,7 @@ class ListClubs extends React.Component {
     }
     return (
       <div className='clubs-background'>
-        <Container style={{ paddingLeft: '30px', paddingRight: '30px' }}>
+        <Container style={{ paddingLeft: '20px', paddingRight: '20px' }}>
           <br/>
           <Header style={ { fontSize: '400%' } } textAlign="center" inverted>Clubs</Header>
           <Form style={ { marginLeft: '25%' } } onSubmit={this.handleSubmit}>
