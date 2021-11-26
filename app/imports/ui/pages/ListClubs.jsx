@@ -3,7 +3,6 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Header, Loader, Card, Input, Icon, Button, Form } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import * as Console from 'console';
 import { Clubs } from '../../api/club/Clubs';
 import ClubCard from '../components/ClubCard';
 
