@@ -12,6 +12,7 @@
       "email": "halliday@hawaii.edu",
       "description": "To practice Aikido",
       "photo": "default",
+      "website": "https://www.aikidohawaii.org/dojo_uh_manoa.html",
       "owner": "aikidoatuh@foo.com"
     },
     {
@@ -24,7 +25,8 @@
       "contact": "Haley Taylor",
       "email": "haleydt@hawaii.edu",
       "description": "\"AlohaThon Dance Marathon at the University of Hawaiʻ at Mānoa is the Aloha State's first and only Miracle Network Dance Marathon (DM). It is a nationwide movement held at over 400 college campuses in support of Children's Miracle Network. In 2019, a total of over $44 million was raised from DMs across the nation. Since inception, Miracle Network Dance Marathon has raised more than $400 million for kids across North America- ensuring that no child or family fights pediatric illness or injury alone. Participants are challenged each year to raise funds that culminate up to the 6-hour long main virtual event. AlohaThon celebrates with non-stop dancing to fight for the keiki of Hawaiʻi. All funds raised are donated to our local Children's Miracle Network Hospital, Kapiolani Medical Center for Women & Children.\"",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://events.dancemarathon.com/index.cfm?fuseaction=donorDrive.event&eventID=4354"
     },
     {
       "name": "American Society of Civil Engineers",
@@ -37,7 +39,8 @@
       "contact": "David Nakamura",
       "email": "dtnak@hawaii.edu",
       "description": "The mission of the ASCE student chapter at the University of Hawai'i at Manoais to expand the knowledge of aspiring civil engineers through networking, monthly meetings, socials, fundraisers and community service.",
-      "photo": "default"
+      "photo": "default",
+      "website": "http://asceuhm.weebly.com/"
     },
     {
       "name": "Anakbayan Hawaii",
@@ -49,7 +52,8 @@
       "contact": "Andrian Gajigan ",
       "email": "agajigan@hawaii.edu",
       "description": "As an integral part of the national democratic movement of the Philippines the mission and purpose of Anakbayan-USA is to gather the broadest possible political, moral, material and sectoral support for Anakbayan Philippines and the national democratic struggle of the Filipino people.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://www.thefilipinochronicle.com/2020/04/06/new-youth-student-activist-organization-launches-at-uh-manoa/"
     },
     {
       "name": "Animal Science Club",
@@ -62,7 +66,8 @@
       "contact": "Crystal Fujiwara",
       "email": "cyf3@hawaii.edu",
       "description": "The Animal Science Club at the University of Hawaii at Manoa is committed to students who share an interest and passion for animals and livestock production systems. The club accomplishes its mission by organizing events that emphasize education and hands-on experience. The club also participates in community service events.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://www.instagram.com/anscclubuhm/"
     },
     {
       "name": "Anthropology Undergraduate Student Association",
@@ -75,7 +80,8 @@
       "contact": "Tara Sutton",
       "email": "thsutton@hawaii.edu",
       "description": "AUSA is a student-led organization that provides undergraduate majors and non-majors with opportunities to: (1) learn more about anthropology (2) participate in networking events for students with interests in anthropology (3) participate in community service events (4) find out about field school, grants, fellowships, and research opportunities of interest to anthropology students.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://sites.google.com/a/hawaii.edu/ausa/home"
     },
     {
       "name": "Associated Students of the John A. Burns School of Medicine",
@@ -101,7 +107,8 @@
       "contact": "Alexa Ortiz",
       "email": "alexamo@hawaii.edu",
       "description": "The BSWO was established to create a body responsive to the needs and desires of its constituents, provide for administrative continuity, and develop a responsible as well as critical awareness of prevalent attitude and actions through participation in co-curricular activities.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Ballroom Dance Club at UH",
@@ -114,7 +121,8 @@
       "contact": "Ravi Narayan",
       "email": "rnarayan@hawaii.edu",
       "description": "Promote both social and competitive ballroom dance ",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Baptist Collegiate Ministries O'ahu",
@@ -127,7 +135,8 @@
       "contact": "Nathaniel Atwell",
       "email": "natwell@hawaii.edu",
       "description": "BCM O'ahu exists to lead college students to an authentic and growing relationship with Jesus Christ that produces in them a passion for God, a desire to live holy, and a vision to impact their campuses and the world.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Beta Alpha Psi - Delta Theta Chapter",
@@ -139,7 +148,8 @@
       "contact": "Jiaying Liang",
       "email": "jiaying6@hawaii.edu",
       "description": "Beta Alpha Psi is the international honor organization for financial information students and professionals. The purpose of this organization shall be to instill in its members a desire for self-improvement, foster high moral and ethical standards in its members, encourage and give recognition to scholastic and professional excellence, cultivate a sense of responsibility and services in its members, promote the collegiate study of accounting, and provide opportunities for association among its members.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://www.bapuhm.org/"
     },
     {
       "name": "Beta Beta Gamma",
@@ -151,7 +161,8 @@
       "contact": "Jordan Humphrey",
       "email": "jah821@hawaii.edu",
       "description": "To bring together a group of strong , caring women to create a sisterhood of leadership, community and diversity.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Business Executive Society of Tomorrow",
@@ -164,7 +175,8 @@
       "contact": "Jennifer Kojima",
       "email": "jkkojima@hawaii.edu",
       "description": "The Business Executive Society of Tomorrow is a general business club at the University of Hawaii at Manoa’s Shidler College of Business. Founded by students in 1998, BEST has a proud history of maintaining and perpetuating excellence in its members. Through the years, we have developed a culture of diligence and dedication to personal and professional growth. Through a combination of tours, workshops, networking events, alumni events, community services, and socials, we strive to mold our members into well-rounded individuals. We pride ourselves in producing the business leaders of tomorrow, and we provide our members with ample opportunities to continually advance toward that goal.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://www.bestuhm.org/"
     },
     {
       "name": "CARP Hawaii",
@@ -176,7 +188,8 @@
       "contact": "Rika Otsubo",
       "email": "rotsubo@hawaii.edu",
       "description": "We create programs, events, and activities promoting principles and raising leaders. Student leaders engage others in thoughtful and meaningful discussion as well as deep and long-lasting relationships for peace and growth.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Chemistry Club at UH Manoa",
@@ -189,7 +202,8 @@
       "contact": "Michaela Kop",
       "email": "Mkop@hawaii.edu",
       "description": "We strive to promote chemistry education and awareness in the local community.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://chemclubatuhm.weebly.com/"
     },
     {
       "name": "Chi Epsilon at UHM",
@@ -201,7 +215,8 @@
       "contact": "Xiaolin Mai",
       "email": "xiaolinm@hawaii.edu",
       "description": "\"Chi Epsilon is a civil engineering honor society that invites top juniors and seniors to become a part of our club, where we do community service, professional development workshops, and fun social activities. Turn on screen reader support\"",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://sites.google.com/site/xeuhmanoa/"
     },
     {
       "name": "Class of 2024 at JABSOM",
@@ -214,7 +229,8 @@
       "contact": "Collin Liang",
       "email": "collinl@hawaii.edu",
       "description": "\"Serve as liaisons between the larger student body and JABSOM faculty (e.g. Office of Medical Education and Office of Student Affairs). Consult, deliberate, and make decisions for student-led events held at the John A. Burns School of Medicine (referred to as JABSOM from here on). Fundraise and dispense funds for the purpose of class activities, academic opportunities, and other celebrations (ie. graduation)\"",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Class of 2025 at JABSOM",
@@ -227,7 +243,8 @@
       "contact": "Eduardo B. Biala, Jr.",
       "email": "bialae@hawaii.edu",
       "description": "\"The purpose of this organization is to gather a group of students to: \n1. Serve as liaisons between the larger student body and JABSOM faculty (e.g. Office of Medical Education and Office of Student Affairs) \n2. Consult, deliberate, and make decisions for student-led events held at the John A. Burns School of Medicine (referred to as JABSOM from here on). \n3. Fundraise and dispense funds for the purpose of class activities, academic opportunities, and other celebrations (i.e., graduation and senior lūʻau).\"",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Club Management Association of America",
@@ -240,7 +257,8 @@
       "contact": "Janisse Precious Ibana",
       "email": "ibanajp@hawaii.edu",
       "description": "The Club Managers Association of America is a professional association for students interested in working at membership/private clubs. We seek to promote relations between members and industry professionals, encourage education, and advance students’  professional lives through close engagement and partnership with local and international club industry professionals, as well as site inspections, seminars, and networking events. ",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Coalition to Stop Campus Hunger",
@@ -252,7 +270,8 @@
       "contact": "Lara Hackney",
       "email": "laraj27@hawaii.edu",
       "description": "\"The purpose of the Coalition to Stop Campus Hunger at UH Mānoa is threefold:  \n2.1 To develop a sustainable community and institutional infrastructure necessary to improve food security for the UH Mānoa campus community. \n2.2 To encourage all members of the UH Mānoa community to become involved in solving food insecurity issues on campus \n2.3 To help to remove the social stigma that goes along with being food insecure. \"",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "C.O.P. Alaka'ina",
@@ -265,7 +284,8 @@
       "contact": "Ilikea Silva",
       "email": "ilikea.silva@hawaii.edu",
       "description": "\"Our purpose is to promote college success and post-secondary opportunities for our College Opportunities Program (COP) students. COP Alaka'ina serves our COP freshmen and alumni throughout the academic year by providing guidance, information, and workshops about academic and college life at UH Manoa. Our areas of focus are the following: professional development, community service, socials, and fundraising. \nAs COP primarily serves those who are economically disadvantaged, academically underprepared, and those who come from underrepresented communities, every bit of support counts.\"",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "CTAHR Student Ambassadors",
@@ -278,7 +298,8 @@
       "contact": "Michelle Au",
       "email": "aumi@hawaii.edu",
       "description": "The purpose of this organization is to create awareness of CTAHR academic programs, recruit prospective students to the college, encourage student engagement, and to positively portray CTAHR to the University and outside communities.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Delta Sigma Pi: Rho Chi",
@@ -290,7 +311,8 @@
       "contact": "Samuel Rivers",
       "email": "riverss@hawaii.edu",
       "description": "Delta Sigma Pi is a professional fraternity organized to foster the study of business in universities; to encourage scholarship, social activity and the association of students for their mutual advancement by research and practice; to promote closer affiliation between the commercial world and students of commerce, and to further a higher standard of commercial ethics and culture and the civic and commercial welfare of the community.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://dspuhm.com/#our-story"
     },
     {
       "name": "Disney Ohana Club",
@@ -303,7 +325,8 @@
       "contact": "Jaymie Bilog-Mina",
       "email": "jaymiebm@hawaii.edu",
       "description": "To provide a safe environment for people to gather and share interests in Disney. Also to promote and encourage the Disney College Program and other Disney internship opportunities.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://disneyoc.wixsite.com/disneyohanaclub"
     },
     {
       "name": "East-West Toastmasters",
@@ -316,7 +339,8 @@
       "contact": "Fernando Santiago-Mandujano",
       "email": "santiago@hawaii.edu",
       "description": "To provide a mutually supportive and positive learning environment in which every member has the opportunity to develop communication and leadership skills, which in turn foster self-confidence and  personal growth",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://eastwest.toastmastersclubs.org/"
     },
     {
       "name": "Engineers' Council at the Univeristy of Hawaii",
@@ -329,7 +353,8 @@
       "contact": "Eric Jonah Lorica",
       "email": "elorica@hawaii.edu",
       "description": "The Engineers’ Council at the University of Hawaiʻi (ECUH) is a student-operated executive board, consisting of elected executive board (officer) positions, Affiliate College of Engineering (COE) Student Organization representatives, and a council member body. The mission of the ECUH is to provide unity action through cooperative, transparent, and effective representation of the student body of the COE at the University of Hawaiʻi at Mānoa. By collaborating with students, faculty, affiliate student organizations, affiliate project organizations, and professional partners, the ECUH serves to promote academic, intellectual, cultural, and social understanding throughout the COE, and to provide students with the finest education environment possible.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://ecuh.org/"
     },
     {
       "name": "Eta Kappa Nu",
@@ -341,7 +366,8 @@
       "contact": "Juliana Chang",
       "email": "changjul@hawaii.edu",
       "description": "Eta Kappa Nu is a professional Electrical and Computer Engineering honor society with its sole purpose being to promote academic excellence, professional accomplishments, and services for its members. Upon completion of the program, the students will be distinguished as having skills and character that is needed in the workforce. ",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://hknhawaii.weebly.com/"
     },
     {
       "name": "Every Nation Campus at the University of Hawaii at Manoa",
@@ -354,7 +380,8 @@
       "contact": "Micah Ibale",
       "email": "mibale@hawaii.edu",
       "description": "Every Nation Campus Ministries partners with schools to help students excel in their academics, develop leadership skills, be a positive influence in their community, and pursue a Christ-centered life.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://www.everynationcampus.org/honolulu"
     },
     {
       "name": "Ēwe ‘Ula",
@@ -367,7 +394,8 @@
       "contact": "K. U'ilani Chow-Rule",
       "email": "chowrule@hawaii.edu",
       "description": "Nurses are among the front-line health workers that provide the time and hands on care for their patients.  Native Hawaiian Health has improved over the years  yet health disparities continue to exist.  Among the disparities are the small number of Native Hawaiian nurses.  Many institutions of education and health repeat non-indigenous values and practices which contribute to indigenous mis-trust and care confusion.  Cultural knowledge and cultural safety can change this. \nĒwe ʻUla was created to provide a place for Native Hawaiian Nurses, and Kākoʻo (Allies of Native Hawaiian Health and the work of Native Hawaiian Nurses), to nurture, gather, support, and mentor one another.  The group was founded on the principle that creating a positive cultural identity will help nurses to bridge the gap between Western Nursing Education, Health Care and indigenous values for the patients they care for.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Family Medicine Interest Group",
@@ -380,7 +408,8 @@
       "contact": "Kylie Popovich",
       "email": "kpopovic@hawaii.edu",
       "description": "The Family Medicine Interest Group (FMIG) is a medical student-run organization that is advised by the Faculty Advisor, Dr. Jill Omori.  FMIG provides unique opportunities for medical students to learn about Family Medicine and to be involved with the community.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Food Science and Human Nutrition Council",
@@ -393,7 +422,8 @@
       "contact": "Kaimalie Stensgaard",
       "email": "kstensga@hawaii.edu",
       "description": "Share news and volunteer opportunities relating to General food and nutrition with attending students. Organized club for students in majors relating to food and nutrition or those who are interested.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Formula SAE Rainbow Warrior Racing",
@@ -406,7 +436,8 @@
       "contact": "Viktor Yago",
       "email": "vyago@hawaii.edu",
       "description": "Formula SAE is an international competition, in which students from universities design a Formula One-style racecar. The Rainbow Warrior Racing (RWR) Team's objective this year is to improve on and advance the design of the electric Formula racecar from last year with the goal to attend the competition and represent the University of Hawai’i at Manoa. Our mission as an organization is to provide our members with experiences that no course can replace, and develop them as engineers and people. The RWR team is a part of a senior design course, but the organization is also open to underclassmen members, which will give them an opportunity to expand their knowledge and improve the program in future years.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Graduate Hui Ola Pono",
@@ -419,7 +450,8 @@
       "contact": "Shelbi Nakano",
       "email": "srnaka@hawaii.edu",
       "description": "The Hui provides a space for public health students to present the ideas, interests, and concerns of the members of the student body and serves as a liaison between the students, faculty, and administration. The Hui facilitates communication and involvement among students through scheduled meetings, coordination of social and educational activities, and dissemination of necessary information. The Hui is an organization that provides students with opportunities to promote Public Health within both the university and Hawaiʻi community at large through outreach, education, and fundraising. Another facet of the group is to provide support and guidance for incoming students and link students in the Public Health program with other students and Public Health professionals locally, nationally, and internationally.",
-      "photo": "default"
+      "photo": "default",
+      "website": "http://publichealthhui.weebly.com/"
     },
     {
       "name": "Grey Hats at UHM",
@@ -432,7 +464,8 @@
       "contact": "Chad Morita",
       "email": "chadmmm@hawaii.edu",
       "description": "Grey Hats aims to teach any students interested in Cybersecurity the fundamentals by working through various challenges, giving talks about a variety of tools and practical skills, and bringing in security professionals to talk about their career or job/internship opportunities.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://acmanoa.github.io/greyhats/"
     },
     {
       "name": "Hawaii Alpha Chapter of Pi Gamma Mu",
@@ -445,7 +478,8 @@
       "contact": "Mari Martinez",
       "email": "mm2046@hawaii.edu",
       "description": "To encourage and recognize superior scholarship in social science disciplines and to foster cooperation and social service among its members. Pi Gamma Mu serves the various social science disciplines which seek to understand and explain human behavior and social relationships as well as their related problems and issues.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://manoapgm.weebly.com/"
     },
     {
       "name": "Hawaii Streams and Ecosystems",
@@ -458,7 +492,8 @@
       "contact": "Cody Ching",
       "email": "codylc@hawaii.edu",
       "description": "The purpose of the Hawaii Streams and Ecosystems Organization is to educate, understand, and continuously explore streams throughout Hawaii. We hope to gain and spread more knowledge about the biological and cultural importance of Hawaii's streams and the benefits they provide, and promote awareness as to why stream conservation is vital in Hawaii.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Hawaii Student Entrepreneurs",
@@ -471,7 +506,8 @@
       "contact": "Kaihehau Goo",
       "email": "Kaihehau@hawaii.edu",
       "description": "To inspire students to be entrepreneurs and to help students start and grow businesses",
-      "photo": "default"
+      "photo": "default",
+      "website": "http://www.hsentrepreneurs.com/"
     },
     {
       "name": "Hawaii Undergraduate Initiative",
@@ -484,7 +520,8 @@
       "contact": "Jordan Abanto",
       "email": "abanto@hawaii.edu",
       "description": "Hawaii Undergraduate Initiative (HUI) strives to help incoming freshmen students smoothly transition into UH Mānoa, be part of a supportive community on campus, and provide leadership opportunities.",
-      "photo": "default"
+      "photo": "default",
+      "website": "http://www.manoa.hawaii.edu/omsshui/"
     },
     {
       "name": "HOSA at UHM",
@@ -497,7 +534,8 @@
       "contact": "Brycen Kawamoto",
       "email": "bkk21@hawaii.edu",
       "description": "The primary purpose of HOSA at UHM is to serve the needs of its members and strengthen the Health Science Education (HSE)-HOSA Partnership.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://hosauhm.wixsite.com/home"
     },
     {
       "name": "Hui Kākoʻo: Department of Social Work Graduate Student Organization ",
@@ -510,7 +548,8 @@
       "contact": "Rosa Waters",
       "email": "watersr@hawaii.edu",
       "description": "To represent and advocate for Graduate Social Work students' interests and needs to the school administration and plan events and programs that promote community, professional development, and critical awareness of local and global issues.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Hui Ola Pono",
@@ -523,7 +562,8 @@
       "contact": "Brandy Hitchcock",
       "email": "brandyml@hawaii.edu",
       "description": "Hui Ola Pono's purpose is to provide students with opportunities to promote Public Health within the community at large through outreach, education, and fundraising. Hui Ola Pono facilitates communication and involvement among students through scheduled meetings, coordination of social and educational activities, and dissemination of necessary information. We provide support and guidance for incoming students and link students in the Public Health program with other students and Public Health professionals. Our vision is to provide a sanctuary for public health undergraduate students to foster professional skills and meaningful connections for their future public health careers.",
-      "photo": "default"
+      "photo": "default",
+      "website": "http://publichealthhui.weebly.com/"
     },
     {
       "name": "ICSpark",
@@ -536,7 +576,8 @@
       "contact": "Patrick McCrindle",
       "email": "pmccrind@hawaii.edu",
       "description": "The purpose of this organization is to provide every motivated student from 6th – 12th grade with a fun coding environment and access to coding mentorship from undergraduate peers from the University of Hawaii at Manoa. The organization is founded on the belief that both undergraduate students and the youth in our community can benefit from peer guided coding and that these experiences will encourage innovation, diversity and volunteerism in the technology sector on the island.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://icspark.github.io/"
     },
     {
       "name": "IEEE Student Branch",
@@ -549,7 +590,8 @@
       "contact": "Brendan Caldwell",
       "email": "bacaldwe@hawaii.edu",
       "description": "The IEEE Student Branch wants to promote students’ academic and professional success. We aim to encourage students to engage with the electrical and computer engineering community at the University of Hawaii at Manoa.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://www.ieeeatuhm.org/"
     },
     {
       "name": "Institute of Transportation Engineers",
@@ -562,7 +604,8 @@
       "contact": "Eric Jonah Lorica",
       "email": "elorica@hawaii.edu",
       "description": "To promote the advancement of transportation by fostering the close association of students with the transportation profession and ITE.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "International Business Organization",
@@ -575,7 +618,8 @@
       "contact": "Kaylee Miki",
       "email": "kmmiki@hawaii.edu",
       "description": "To promote Shidler’s motto of “International Excellence” by instilling the importance of cultural awareness and international appreciation within a professional setting.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://www.ibouhm.com/"
     },
     {
       "name": "International Student Association",
@@ -588,7 +632,8 @@
       "contact": "Nathan Keovichith",
       "email": "nathnak7@hawaii.edu",
       "description": "\"The goals of the International Student Association is to \nto promote global friendship and understanding; \nto support new and continuing students in their educational objectives; \nto explore issues and places in Hawaii; \nto develop leadership among international students; \nto have fun.\"",
-      "photo": "default"
+      "photo": "default",
+      "website": "http://www.isauhm.com/"
     },
     {
       "name": "Intervarsity Christian Fellowship",
@@ -601,7 +646,8 @@
       "contact": "Hannah Archer",
       "email": "harcher@hawaii.edu",
       "description": "Transformed by God's Aloha, together we bless the campus, the islands, and the nations.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://www.intervarsityhawaii.org/manoa.html"
     },
     {
       "name": "K-Pop Cardio Crew",
@@ -614,7 +660,8 @@
       "contact": "Amerlie Lam",
       "email": "amerlie@hawaii.edu",
       "description": "\"To promote fitness within the community \nTo express appreciation for pop music in all languages \nTo break language barriers through exercise and music\"",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Ka Lama Kukui Indigenous Health Student Interest Group",
@@ -627,7 +674,8 @@
       "contact": "Brachelle Nueku",
       "email": "nueku@hawaii.edu",
       "description": "To develop skillful and assiduous professionals by providing mentorship and encouragement towards higher education in indigenous populations, cultivating cultural practice among medical students to develop cultural competence and humility, and recognizing the presence of indigenous people in the JABSOM community. ",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Ka Mea Kolo Entomology Club",
@@ -640,7 +688,8 @@
       "contact": "Michelle Au",
       "email": "aumi@hawaii.edu",
       "description": "The purpose of Ka Mea Kolo is to share our understanding and enthusiasm for the earth's most diverse creatures especially those that have made Hawai'i their home. The Lorax spoke for the trees (Dr. Seuss 1971). We speak for the insects. We provide presentations to school groups and community organizations around Oʻahu. We hope to raise awareness of just how important insects are in the world. ",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Katipunan Club",
@@ -653,7 +702,8 @@
       "contact": "Eunice Bala",
       "email": "balae@hawaii.edu",
       "description": "We serve as the premiere collegiate-based resource center for the creation, preservation, and promotion of the Filipino language, literature, and culture here in Hawai'i. By increasing awareness and knowledge of another’s or your own culture, you grasp a deeper understanding and appreciation of the people around you.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://manoa.hawaii.edu/rio/katipunan/"
     },
     {
       "name": "Kempo Club",
@@ -666,7 +716,8 @@
       "contact": "Kevin Hanaoka",
       "email": "hanaokak@hawaii.edu",
       "description": "To introduce, promote and teach kempo to UH faculty, students, and community members for self defense and recreational purposes.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://sites.google.com/site/kempoclubatuhm/"
     },
     {
       "name": "Kim's Taekwon Do at UHM",
@@ -679,7 +730,8 @@
       "contact": "Mason Nakadomari",
       "email": "nakadoma@hawaii.edu",
       "description": "To teach discipline, physical fitness, integrity, understanding and self defense through  Taekwon Do and martial arts related activities.",
-      "photo": "default"
+      "photo": "default",
+      "website": "http://www.hawaiitaekwondo.com/kimtkd_uhm.html"
     },
     {
       "name": "KRS Club",
@@ -692,7 +744,8 @@
       "contact": "Anella Palacpac",
       "email": "anellajp@hawaii.edu",
       "description": "The purpose of this organization is to build a community among students that are involved in and/or express an interest in the field of kinesiology and rehabilitation sciences. What is its broad goals? The broad goals are to provide students with connections/networking among other KRS students and information that will further the success of participants in the kinesiology field. The aims of this organization are to strengthen the social aspect of community among students in the Kinesiology field. In addition, our organization will be dedicated in participating in community/volunteer service hours. These service hours will not only create community engagement, but also ensure members receive interactive experiences showing the opportunities that can be achieved with a Kinesiology and Rehabilitation Science Bachelor’s degree. The Kinesiology and Rehabilitation Club was founded to give students with similar interests in the field open opportunities for members to branch out in the community, and find their direction within the kinesiology and rehabilitation field.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://uhmkrsclub.weebly.com/"
     },
     {
       "name": "Lifestyle Medicine Interest Group",
@@ -705,7 +758,8 @@
       "contact": "Kellie Goya",
       "email": "kellieng@hawaii.edu",
       "description": "Raising awareness of how a healthy lifestyle through avenues like nutrition and exercise can improve health. Exploring how we as medical students can incorporate that into our lives and the lives of our patients.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Linguistic Society of Manoa",
@@ -718,7 +772,8 @@
       "contact": "Caroline Hendy",
       "email": "chendy@hawaii.edu",
       "description": "The mission of LSM is to promote academic and social activity among the students, staff, and faculty at the University of Hawaiʻi at Mānoa who are interested in linguistics. We are dedicated to the promotion of linguistics, and to making the study of language and linguistics fun, social, inclusive, and interactive.",
-      "photo": "default"
+      "photo": "default",
+      "website": "http://ling.hawaii.edu/activities/lsh/"
     },
     {
       "name": "Living Stone Chinese Christian Fellowship",
@@ -731,7 +786,8 @@
       "contact": "Liang Wang",
       "email": "lwang2@hawaii.edu",
       "description": "Bible study, watching movies, hiking, and sharing the Gospel of Christianity",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Manoa Academy of Gamers",
@@ -744,7 +800,8 @@
       "contact": "Albert Yee",
       "email": "ayee9@hawaii.edu",
       "description": "\"Organizing a safe physical space dedicated to the diversity of students at the University of Hawaiʻi at Mānoa (UHM) who may identify themselves as “gamers” \nPromoting activities (directly related to playing games or activities around games) structured around campus culture that are inclusive of a variety of communities presently underrepresented at UHM \nTeaching business and entrepreneurship through digital/new media using the medium of esports and gaming \nTreating connections for our members, whether it be through p2p networking, internships, employment opportunities, or new extracurricular projects\"",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Mānoa Debate Union",
@@ -757,7 +814,8 @@
       "contact": "Cullen Slavens",
       "email": "cullemc@hawaii.edu",
       "description": "The Union shall provide a forum for free expression and disinterested debate on all topics. The Union agrees to abide by all established policies of the University of Hawai‘i at Mānoa.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Manoa Scholars Club",
@@ -770,7 +828,8 @@
       "contact": "Kristina Theam",
       "email": "kctheam@hawaii.edu",
       "description": "\"The Mānoa Scholars Club is a student-led Registered Independent Organization (RIO) at the University of Hawai‘i at Mānoa that provides New Warrior Scholars the opportunity to enhance your academic journey. \n\n​This club will give you opportunities to make a difference in the community, network with like-minded individuals, positively impact prospective UH Mānoa students, and develop the skills needed to succeed in the workforce. \"",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Marine Robotics at the University of Hawaii",
@@ -783,7 +842,8 @@
       "contact": "Tabata (Tabby) Viso-Naffah",
       "email": "tvn@hawaii.edu",
       "description": "Team Kanaloa is a Vertically Integrated Project aiming to advance technologies of Autonomous Surface Vehicles for research, expose students to the field of marine robotics, and provide opportunities for kinesthetic learning.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Medical Innovation and Design Hawaii",
@@ -796,7 +856,8 @@
       "contact": "Kelly Huang",
       "email": "kellyzh@hawaii.edu",
       "description": "To bring students and faculty together from different disciplines to develop solutions for challenging medical problems. ",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Medical Students for a Sustainable Future at JABSOM",
@@ -809,7 +870,8 @@
       "contact": "Kelli Kokame",
       "email": "kak22013@hawaii.edu",
       "description": "MS4SF is dedicated to uniting medical students invested in the health of our planet and patients and providing them with tools to make a difference at their institutions and in their communities through advocacy, curriculum reform, research, and climate-smart health care.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Medical Student Mentorship Program",
@@ -822,7 +884,8 @@
       "contact": "Shirley Chang",
       "email": "shirley3@hawaii.edu",
       "description": "\"This organization shall be known as MSMP. This acronym stands for ‘Medical Student Mentorship Program.  The purpose of this club shall be to facilitate the process of getting into medical school for University of Hawai’i undergraduate students.\"",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Na Hawaii Imi Loa",
@@ -835,7 +898,8 @@
       "contact": "Ikaika Keliiliki",
       "email": "ikeliili@hawaii.edu",
       "description": "To service the Hawaiian community by strengthening the Native Hawaiian presence in the Library and Information Sciences profession, and by building the capacity of the Hawaiian community in Library and Information Sciences practices.",
-      "photo": "default"
+      "photo": "default",
+      "website": "http://nhilhh.weebly.com/"
     },
     {
       "name": "Na Koa Lani Booster Club",
@@ -848,7 +912,8 @@
       "contact": "Jerrett Chang",
       "email": "jerrettc@hawaii.edu",
       "description": "The purpose of the Na Koa Lani Booster Club is to bolster the development of future Air Force leaders by supporting and improving the experience of Air Force Reserve Officer Training Corps (AFROTC) cadets at the University of Hawaii at Manoa (UHM) through fundraising and sponsoring extracurricular activities.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "National Student Speech-Language-Hearing Association  - Hui Puanaleo Chapter ",
@@ -861,7 +926,8 @@
       "contact": "Samantha Sonnier",
       "email": "ssonnier@hawaii.edu",
       "description": "To inspire, empower, and support students in the field of communication sciences and disorders. ",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://www.nsslha.org/chapters/affiliated-chapters/chaptersnew/university-of-hawaii-manoa/"
     },
     {
       "name": "Natural Science Student Ambassadors",
@@ -874,7 +940,8 @@
       "contact": "Emi Lin Luo",
       "email": "emilin@hawaii.edu",
       "description": "\"Our organization strives to promote a welcoming and inclusive community for all students pursuing an undergraduate degree in the Natural Sciences. Members of our organization will act as mentors and leaders, aiding incoming students in their transition to our University and building camaraderie amongst continuing students.\"",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Newman Club",
@@ -887,7 +954,8 @@
       "contact": "Montserrat Montanes i Arbo",
       "email": "montanes@hawaii.edu",
       "description": "Newman Club is a Catholic Campus Ministry serving the University of Hawaii at Manoa students, faculty and staff. We are a diverse and inclusive community, a home away from home for students where \"heart speaks to heart.\" We provide life-long spiritual development, leadership skills training, retreats, community building, socials and more to help people of all ages to grow in understanding of how we are called to live our faith. ",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Orthopedic Interest Group",
@@ -900,7 +968,8 @@
       "contact": "Maveric Abella",
       "email": "maveric@hawaii.edu",
       "description": "\"The purpose of this organization is to provide mentorship to students interested in orthopedics and to offer opportunities for surgical exposure/education and research. Due to the timeline of students deciding their specialty career choice by their fourth year and limited exposure to orthopedics in the current curriculum, OIG is important in providing opportunities for students to explore their interest in becoming an orthopedic physician. This organization provides clinical and networking events throughout the year to provide support for those interested in this field.\"",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Osu! Club @ UH Manoa",
@@ -913,7 +982,8 @@
       "contact": "Desmond Lum",
       "email": "lum25@hawaii.edu",
       "description": "To promote a community involving the video game \"osu!\" among other similar interests. The overall goal is to create a club that allows people to meet others who are osu! players and socialize in a comfortable space.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Phi Alpha Theta- Alpha Beta Epsilon",
@@ -925,7 +995,8 @@
       "contact": "Adrian Alarilla",
       "email": "alarilla@hawaii.edu",
       "description": "Phi Alpha Theta is the national honor society for history students which brings students and faculty together to share their interests in history.  The Alpha Beta Epsilon chapter has been very active in sponsoring events and sharing history with students and the local community.  Phi Alpha Theta fosters a commitment to historical excellence and academic achievement.",
-      "photo": "default"
+      "photo": "default",
+      "website": "http://manoa.hawaii.edu/history/undergraduate-program/history-honor-society/"
     },
     {
       "name": "Philippine Medical Student Association of Hawaii",
@@ -938,7 +1009,8 @@
       "contact": "Melissa Malia Gozun",
       "email": "mmgozun@hawaii.edu",
       "description": "PMSAH is a community service organization at the John A Burns School of Medicine (JABSOM) at the University of Hawaii at Manoa. The goal of PMSAH is to teach and celebrate Filipino culture, offer mentorship to Filipino students at JABSOM, UH Manoa, and beyond, and bring awareness to social justice and cultural sensitivity of Filipino patients. Secondly, PMSAH will encourage Filipino youths to seek careers in the health field. ",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://pmah-hawaii.org/mentorship"
     },
     {
       "name": "Phoenix Dance Chamber",
@@ -951,7 +1023,8 @@
       "contact": "Karen Chan",
       "email": "kykchan@hawaii.edu",
       "description": "promote Chinese culture through Chinese dance",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://www.phoenixdancechamber.org/"
     },
     {
       "name": "Powerlifting Club at the University of Hawai’i at Mānoa",
@@ -964,7 +1037,8 @@
       "contact": "Daniel Aguirre",
       "email": "daguirre@hawaii.edu",
       "description": "To form a team that can represent the University of Hawai’i at local, state, and national competitions.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Pre-Dental Association",
@@ -977,7 +1051,8 @@
       "contact": "Vanessa Khamkhay",
       "email": "vkhamkha@hawaii.edu",
       "description": " To support pre-dental students by providing volunteer opportunities, meetings with dental care professionals, and coordinating specialized workshops. Through this, our main objective is to assist passionate pre-dental students become competitive dental school applicants.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Pre-Medical Association at the University of Hawaii at Manoa",
@@ -990,7 +1065,8 @@
       "contact": "Lauren Nakamine",
       "email": "lnakamin@hawaii.edu",
       "description": "THE PRE-MEDICAL ASSOCIATION (PMA) IS THE LARGEST PRE-HEALTH ORGANIZATION AT THE UNIVERSITY OF HAWAI’I AT MĀNOA. PMA STRIVES TO PROVIDE STUDENTS WITH A HOLISTIC PERSPECTIVE OF THE FIELD OF HEALTHCARE, HELP MEMBERS TO DEVELOP ACADEMICALLY AND PROFESSIONALLY THROUGH SERVICE AND LEADERSHIP OPPORTUNITIES, AND FOSTER COLLEGIALITY AMONG PEERS WITH SIMILAR GOALS AND INTERESTS.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Pre-Optometry Club at University of Hawai'i at Mānoa",
@@ -1003,7 +1079,8 @@
       "contact": "Ainsley Verkaik",
       "email": "ainsleyv@hawaii.edu",
       "description": "This organization serves to provide a space for pre-optometry students to come together and consult with each other on graduate school preparation. ",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Pre-Pharmacy Association at University of Hawaii at Manoa",
@@ -1016,7 +1093,8 @@
       "contact": "Emele Kim",
       "email": "emele3@hawaii.edu",
       "description": "To help students who are interested in the Pharmaceutical field come together to bond with fellow students as well as help each other learn more about the many different paths we can take in the Pharmacy profession. ",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Primary Care Progress at UH",
@@ -1029,7 +1107,8 @@
       "contact": "Jon Abe",
       "email": "jabe20@hawaii.edu",
       "description": "Primary Care Progress at UH strives to expand the primary care workforce in Hawai‘i by  promoting awareness, interdisciplinary collaboration, mentorship, community engagement,  and advocacy & leadership among students across various professional schools.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Psi Sigma: The Psychology Connection",
@@ -1042,7 +1121,8 @@
       "contact": "Darcie Lynn Ing",
       "email": "dling9@hawaii.edu",
       "description": "To serve as the connection among psychology students; facilitate social interaction and psychology discussion. We encourage the pursuit of psychological science, foster enduring connections among peers in psychology, and advance the academic and professional development of ​our members.​  Psi Sigma uphold​s​ the values of knowledge, benevolence, and integrity.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://sites.google.com/view/psisigmathepsychologyconnecion/"
     },
     {
       "name": "Public Relations Student Society of America",
@@ -1055,7 +1135,8 @@
       "contact": "Suzie Park",
       "email": "suziep@hawaii.edu",
       "description": "The Public Relations Student Society of America (PRSSA) strives to involve students in Hawai'i's communications industry through speaking events, career tours, networking mixers and more! ",
-      "photo": "default"
+      "photo": "default",
+      "website": "http://www2.hawaii.edu/~prssa/"
     },
     {
       "name": "Red Cross Club at UH",
@@ -1067,7 +1148,8 @@
       "contact": "Kylie Alarcon",
       "email": "kalarcon@hawaii.edu",
       "description": "A Red Cross Club is a group that provides you and your peers with opportunities to make a difference by addressing your community's greatest needs and developing leadership skills. Red Cross Clubs empower you with knowledge and life-saving skills to help prepare your school and community to respond to emergencies.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://volunteerconnection.redcross.org/?nd=club_detail&club_id=2906&return_jid=58550536"
     },
     {
       "name": "Reformed University Fellowship",
@@ -1080,7 +1162,8 @@
       "contact": "Marina Turner",
       "email": "turnerm6@hawaii.edu",
       "description": "The purpose of Reformed University Fellowship is to reach and equip students with the gospel of Jesus Christ. We are a group on campus seeking to grow in our relationship with God while also sharing what we know to others. RUF is a community where students can make friends, grow in their faith, serve the community and have fun doing it.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://ruf.org/ministry/university-of-hawaii/"
     },
     {
       "name": "Regents and Presidential Scholars Club",
@@ -1093,7 +1176,8 @@
       "contact": "Linnea Tucker",
       "email": "linneadt@hawaii.edu",
       "description": "\"The purpose of this organization is to:\nStimulate a social environment for its members;\nCultivate a support network of scholars who excel in a myriad of academic areas;\nMake positive contributions to the community; and\nInform members of upcoming university and community events, seminars, jobs/internship/volunteer opportunities, and university programs such as Study Abroad and National Student Exchange.\"",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Rural Health Interest Group",
@@ -1106,7 +1190,8 @@
       "contact": "Melia Takakusagi",
       "email": "meliat@hawaii.edu",
       "description": "To promote medical practice on the outer islands and underserved areas of Oahu, increase awareness about physician shortage in Hawaii and nationwide, provide medical students with education about rural health issues, and to advocate for better health care in rural communities.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Second Language Studies Student Association",
@@ -1119,7 +1204,8 @@
       "contact": "Hitoshi Nishizawa",
       "email": "hitoshi6@hawaii.edu",
       "description": "The Second Language Studies Student Association (SLSSA) is an association of the Graduate Students of the Second Language Studies Department at the University of Hawaiʻi at Mānoa. It is dedicated to developing the academic, professional and social identities of its members. It seeks to provide avenues for development of these identities for its members through various events throughout the year. It also seeks to connect them to the career and volunteer opportunities outside the department and University.",
-      "photo": "default"
+      "photo": "default",
+      "website": "http://blog.hawaii.edu/slssa/"
     },
     {
       "name": "Social Leaders at Manoa",
@@ -1132,7 +1218,8 @@
       "contact": "Sarah-Lyn Kaeo",
       "email": "slkaeo@hawaii.edu",
       "description": "To cultivate a prestigious gathering of student leaders through passionate engagement and connection with the Dean of the College of Social Sciences",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Society of Automotive Engineers",
@@ -1145,7 +1232,8 @@
       "contact": "Ryan Fujimoto",
       "email": "ryanafuj@hawaii.edu",
       "description": "The mission of the SAE is to provide technical resources and facilitate the integration of underclassmen in environments that develop leadership, time management, and technical skills through our sponsored projects.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Society of Human Resources Management - Aloha Chapter",
@@ -1158,7 +1246,8 @@
       "contact": "Susan Iverson",
       "email": "susanyi@hawaii.edu",
       "description": "Promotes collaboration and interaction among diverse individuals with an expressed interest in the study of Human Resources Management and its theories, practices, and applications.",
-      "photo": "default"
+      "photo": "default",
+      "website": "http://www.shrmuhm.com/"
     },
     {
       "name": "Society of Women Engineers",
@@ -1171,7 +1260,8 @@
       "contact": "Gabrielle Rose Baguio",
       "email": "gbaguio@hawaii.edu",
       "description": "Empower women to achieve full potential in careers as engineers and leaders, expand the image of the engineering and technology professions as a positive force in improving the quality of life, and demonstrate the value of diversity and inclusion.",
-      "photo": "default"
+      "photo": "default",
+      "website": "http://uhm.swe.org/"
     },
     {
       "name": "Student Chapter of the American Society of Landscape Architects at UH Manoa",
@@ -1184,7 +1274,8 @@
       "contact": "Kiana Dai",
       "email": "kianaw24@hawaii.edu",
       "description": "\"The purpose of the Society is the advancement of knowledge, education, and skill in the art and science of landscape architecture as an instrument of service in the public welfare.  To this end, the Society promotes the profession of landscape architecture and advances the practice through advocacy, education, communication, and fellowship.\n\nThe purpose of the Chapter shall be to bring students together through organized activities that 1) are consistent with the purpose and policies of the Society; 2) enhance understanding of the Society, the profession, and related disciplines; 3) improve skills and knowledge and complement the educational curriculum; and 4) encourage participation in the programs and activities of the Society, its professional chapters, and student chapters. \"",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Student Nurses' Association at UH Manoa",
@@ -1197,7 +1288,8 @@
       "contact": "Theodora You",
       "email": "yout@hawaii.edu",
       "description": "A. To assume responsibility for contributing to nursing education in order to provide for the highest quality of health care. B. To provide programs representative of fundamental interests and concerns to nursing students. C. To aid in th e development of the whole person, including his/her professional role, his/her responsibility for health care of people in all walks of life. \n(1) SNA members will work to create a positive, professional atmosphere, which will focus on mentorship, leadership, and collaboration. \n(2) To promote open communication and collaboration throughout the student body, faculty, and administration of the nursing program. \n(3) To select students as representatives to participate on school committees in order to share responsibility and accountability for governance within the nursing program. \n(4) SNA officers and class representatives will act as advocates for nursing students by effectively articulating the collective concerns of the student body through the established channels of communication at the Department of Nursing. \n(5) To foster and develop mentoring relationships among students by assisting new students in the school orientation program and offering ongoing assistance on a formal and/or informal basis. \n(6) To promote participation in all SNA/class activities and opportunities to develop leadership skills through various volunteer, social, educational, and fundraising activities. \n(7) To represent the students of the Department of Nursing (DON) in the pursuit of excellence in educational training toward competent, professional care and practice. \n(8) To facilitate student knowledge of and participation in professional nursing organizations. \n(9) To assist in increased public understanding of the role of the student and professional nurse beyond the clinical setting. \n(10) To seek and provide service opportunities for students that meet the health careneeds and wellbeing of community members regardless of race, ethnicity, gender, sexual orientation, socioeconomic status, age, physical abilities, political beliefs, religious beliefs, nationality, or other ideologies.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Student Veterans of America at the University of Hawai’i at Mānoa",
@@ -1210,7 +1302,8 @@
       "contact": "Joshua McDaniel",
       "email": "jcm27@hawaii.edu",
       "description": "SVA’s purpose is to establish ties with the community and school while empowering veterans to pursue their education during their transition from military life to civilian life at the University of Hawai’i at Mānoa.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Supporting Women in Technology and Computing Hawaii",
@@ -1223,7 +1316,8 @@
       "contact": "Kyra Ikeda",
       "email": "kyrai@hawaii.edu",
       "description": "To support women and minorities, promote gender and racial equality, facilitate professional, technical & personal development events, create an environment and atmosphere where women can feel safe, prevent violence against women by raising awareness of campus resources, and provide an overall sense of community.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "Tea Club at the University of Hawaii at Manoa",
@@ -1236,7 +1330,8 @@
       "contact": "Liliana Kershner",
       "email": "lilianak@hawaii.edu",
       "description": "To promote peacefulness from one bowl of tea, and enjoy the Japanese culture. ",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "The IMUA Scholarly Society at UH (Short name: IMUA Labs)",
@@ -1249,7 +1344,8 @@
       "contact": "Ariana Bracero",
       "email": "braceroa@hawaii.edu",
       "description": "\"The IMUA Scholarly Society (Society) is a knowledge-innovation and transformational-learning community open to all members of the University of Hawai‘i’s ‘Ohana and their community partners who are willing to collaborate to cultivate the collective intelligence and wisdom crucial for leading a dignified, fulfilling, and nature-respecting life in a rapidly changing and complex world. \n\nIMUA Labs is established to foster inclusive ecosocial innovation and transdisciplinary knowledge production for the benefit of all communities that call The Hawaiian Islands their home. The organization facilitates reflexive organizational learning within regional academic ecosystems aimed at generating intellectual capacity necessary for mounting effective responses to the grand challenges of socioecological transformation, energy transition, and climate change.\"",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "The Navigators",
@@ -1262,7 +1358,8 @@
       "contact": "Grace Roberts",
       "email": "gracerob@hawaii.edu",
       "description": "The Navigators is a group of college students seeking to know Christ, make him known, and help others do the same.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "The Pre-Veterinary Club at UH Manoa",
@@ -1275,7 +1372,8 @@
       "contact": "Lauren Arakaki",
       "email": "laurena9@hawaii.edu",
       "description": "The Pre-Veterinary Club at the University of Hawaii at Manoa is committed to students who share an interest and passion for animals and veterinary medicine. The club accomplishes its mission by organizing events that emphasize education and hands-on experience. The club also participates in community service events.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://manoa.hawaii.edu/rio/prevet/aboutus/"
     },
     {
       "name": "Timpuyog Organization",
@@ -1288,7 +1386,8 @@
       "contact": "Krizhna Bayudan",
       "email": "krizhnab@hawaii.edu",
       "description": "We, the students of the Timpuyog Organization, believe in establishing a spirit of pride, emphasizing the advancement of the Ilokano language and culture, and providing opportunities for the meaningful exchanges of ideas.",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://manoa.hawaii.edu/rio/timpuyog/Home.html"
     },
     {
       "name": "Travel Industry Management Student Association",
@@ -1301,7 +1400,8 @@
       "contact": "Fanglin Xu",
       "email": "fanglin@hawaii.edu",
       "description": "To foster the future leaders of Hawaii’s travel industry",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://tim.hawaii.edu/student-portal/student-life/timsa/"
     },
     {
       "name": "Unicef Unite Club",
@@ -1313,7 +1413,8 @@
       "contact": "Kayla Anandia",
       "email": "anandia@hawaii.edu",
       "description": "The UNICEF UNITE Club at the University of Hawaii at Manoa represents UNICEF’s work by implementing UNICEF’s values—Care, Respect, Integrity, Trust, and Accountability—and core competencies that underline teamwork, communication, and determination. We are a team of committed advocates standing at a collegiate level who seek to bridge the gap between disadvantaged children and the rest of the world. We have continuously incorporated UNICEF’s values within the UHM community through various activities such as fundraisers, seminars, campaigns, and informative posts.",
-      "photo": "default"
+      "photo": "default",
+      "website": ""
     },
     {
       "name": "VIP Team RoSE",
@@ -1326,7 +1427,8 @@
       "contact": "Michael Mori",
       "email": "mhmori@hawaii.edu",
       "description": "VIP Team RoSE has the goal to create a professional and safe atmosphere for students to collaborate on an engineering project that aims to design and fabricate a rover for the University Rover Challenge. ",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://sites.google.com/a/hawaii.edu/uh-vip/teams"
     },
     {
       "name": "Volunteers for Intercultural and Definitive Adventures (VIDA) ",
@@ -1339,7 +1441,8 @@
       "contact": "Celinndion Tauheango",
       "email": "cktauhea@hawaii.edu",
       "description": "VIDA is a non-profit organization that focuses on providing medical, dental, and veterinary healthcare to impoverished rural communities in Central America. VIDA Hawaii is Hawaii's first VIDA chapter at UH Manoa, and VIDA Hawaii aims to provide a service-learning experience to UH Manoa students who have an interest in the healthcare field and/or helping communities in need. ",
-      "photo": "default"
+      "photo": "default",
+      "website": "https://sites.google.com/vidavolunteertravel.org/vida-hawaii-website/home"
     }
   ]
 }

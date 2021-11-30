@@ -4,18 +4,18 @@
   height: auto;
   margin-top: 14px;
   position: relative;
-  padding-bottom: 250px;
+  padding-bottom: 330px;
 }
 
 .home{
   background-color: rgba(255, 255, 255, .7);
   border-radius: 30px;
-  top: 120px;
+  top: 170px;
   position: relative;
 }
 
 .footer-background{
-  background-color: #154a00;
+  background-color: #024731;
   height: auto;
   color: white;
   padding-top: 14px;
@@ -27,7 +27,7 @@
   background-size: cover;
   height: auto;
   margin-top: 14px;
-  padding-bottom: 100px;
+  padding-bottom: 140px;
 }
 
 .informations{
@@ -54,4 +54,11 @@
 h1{
   text-shadow: 0 0 3px black, 0 0 5px black;
   font-style: oblique;
+}
+
+.clubs-background{
+  background-color: rgb(60, 151, 150);
+}
+.card .image{
+  margin-top: 20px;
 }

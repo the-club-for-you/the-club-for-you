@@ -20,12 +20,12 @@ class ClubInfo extends React.Component {
 
   // On successful submit, insert the data.
   read(data) {
-    const { name, approve, expire, type, contact, email, description, _id } = data;
+    const { name, approve, expire, type, contact, email, description, website, _id } = data;
     let { photo } = data;
     if (photo == null) {
       photo = 'default';
     }
-    Clubs.collection.find(_id, { $set: { name, approve, expire, type, contact, email, description, photo } }, (error) => (error ?
+    Clubs.collection.find(_id, { $set: { name, approve, expire, type, contact, email, description, photo, website } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
   }
@@ -69,6 +69,10 @@ class ClubInfo extends React.Component {
                 <li><Header as='h4'>Contact Person:</Header> {this.props.doc.contact}</li> <br/>
                 <li><Header as='h4'>Contact Person`s Email:</Header> {this.props.doc.email}</li>
               </ul>
+              <Header as={'h3'}>
+                <a href={this.props.doc.website}> {this.props.doc.website}</a>
+              </Header>
+              <br/>
             </Grid.Row>
           </Container>
         </Grid>

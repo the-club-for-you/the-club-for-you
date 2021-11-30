@@ -6,11 +6,37 @@ import { withRouter, NavLink, Link } from 'react-router-dom';
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class ClubCardAdmin extends React.Component {
   render() {
+    const clubTypes = [
+      { name: 'academic', color: '#129488' },
+      { name: 'cultural', color: '#3FDA7F' },
+      { name: 'ethnic', color: '#3BA2B4' },
+      { name: 'fraternity or sorority', color: '#90afa2' },
+      { name: 'honorary society', color: '#20c4f4' },
+      { name: 'leisure', color: '#AAC84C' },
+      { name: 'political', color: '#2AC3F3' },
+      { name: 'professional', color: '#4ca3dd' },
+      { name: 'recreational', color: '#62D5CC' },
+      { name: 'religious', color: '#276F9A' },
+      { name: 'spiritual', color: '#532AF3' },
+      { name: 'sports', color: '#F3362A' },
+      { name: 'service', color: '#30D03B' },
+    ];
+
+    function labelColor(type, clubType) {
+      let color = '';
+      for (let i = 0; i < clubType.length; i++) {
+        if (type.toUpperCase() === clubType[i].name.toUpperCase()) {
+          color = clubType[i].color;
+        }
+      }
+      return color;
+    }
+
     if (this.props.club.photo === 'default') {
       this.props.club.photo = '/images/UH-logo.jpg';
     }
     return (
-      <Card>
+      <Card style={ { borderRadius: '25px' } }>
         <Image src={this.props.club.photo} wrapped ui={false} />
         <Card.Content>
           <Card.Header>{this.props.club.name}</Card.Header>
@@ -21,10 +47,11 @@ class ClubCardAdmin extends React.Component {
           </Card.Meta>
         </Card.Content>
         <Card.Content extra>
-          <Label.Group>
+          <Label.Group size={'large'}>
             {this.props.club.type.map((data, index) => <Label
               key={index}
               horizontal
+              style={ { backgroundColor: `${labelColor(data, clubTypes)}`, color: 'white' } }
               as={ NavLink }
               exact
               to={`/clubtype/${data}`}

@@ -22,12 +22,14 @@ class ClubsCollection {
       email: String,
       description: String,
       photo: String,
+      website: { type: String, optional: true },
       owner: { type: String, optional: true },
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);
     // Define names for publications and subscriptions
     this.userPublicationName = `${this.name}.publication.user`;
+    this.clubPublicationName = `${this.name}.publication.club`;
     this.adminPublicationName = `${this.name}.publication.admin`;
   }
 }

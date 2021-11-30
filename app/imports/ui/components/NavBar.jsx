@@ -11,7 +11,7 @@ class NavBar extends React.Component {
   render() {
     return (
       <Menu attached="top" borderless>
-        <Image height={50} src="/images/logo.png"/>
+        <Image style={ { padding: '5px 5px 5px 5px', height: '50px' } } src="/images/logo.png"/>
         <Menu.Item as={NavLink} activeClassName="" exact to="/">
            Home
         </Menu.Item>

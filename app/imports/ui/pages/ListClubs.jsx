@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Card } from 'semantic-ui-react';
+import { Container, Header, Loader, Card, Input, Icon, Button, Form } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Clubs } from '../../api/club/Clubs';
@@ -8,6 +8,25 @@ import ClubCard from '../components/ClubCard';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListClubs extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: '', search: '' };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+
+  handleSubmit() {
+    this.setState({ search: this.state.value });
+  }
+
+  handleClick(event) {
+    event.preventDefault();
+    this.setState({ search: this.state.value });
+  }
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
@@ -15,16 +34,42 @@ class ListClubs extends React.Component {
   }
 
   // Render the page once subscriptions have been received.
+  // searchValue is what user put in the search box.
+  // findClub(clubName, allClub) return all the clubs that match the searchValue.
   renderPage() {
-    return (
-      <div className='background'>
-        <Container>
-          <br/>
-          <Header as={'h1'} textAlign="center" inverted>Clubs</Header>
-          <Card.Group centered itemsPerRow={6}>
-            {this.props.clubs.map((data) => <ClubCard key={data._id} club={data} />)}
+    const searchValue = this.state.search;
+    function findClub(clubName, allClub) {
+      const clubFound = [];
+      for (let i = 0; i < allClub.length; i++) {
+        const clubs = (allClub[i].name).toUpperCase();
+        const input = clubName.toUpperCase();
+        if (clubs.includes(input)) {
+          clubFound.push(allClub[i]);
+        }
+      }
+      if (clubFound.length === 0) {
+        return (<Header style={ { fontSize: '200%' } } inverted>No club Found.</Header>);
+      }
+
+      return (
+        <div> <br/><br/>
+          <Card.Group centered stackable itemsPerRow={5}>
+            {clubFound.map((data) => <ClubCard key={data._id} club={data} />)}
           </Card.Group>
+        </div>
+      );
+    }
+    return (
+      <div className='clubs-background'>
+        <Container style={{ paddingLeft: '20px', paddingRight: '20px' }}>
           <br/>
+          <Header style={ { fontSize: '400%' } } textAlign="center" inverted>Clubs</Header>
+          <Form style={ { marginLeft: '25%' } } onSubmit={this.handleSubmit}>
+            <Input size="huge" style={ { width: '50%' } } type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search by club's name"/>
+            <Button size="huge" color='green' onClick={this.handleClick}><Icon className="search"/>Search</Button>
+          </Form>
+          {findClub(searchValue, this.props.clubs)}
+          <br/><br/><br/>
         </Container>
       </div>
     );

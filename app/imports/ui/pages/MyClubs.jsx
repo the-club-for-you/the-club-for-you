@@ -3,7 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Header, Loader, Card } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import { ClubsOwned } from '../../api/club/ClubsOwned';
+import { Clubs } from '../../api/club/Clubs';
 import MyClubsCard from '../components/MyClubsCard';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
@@ -17,14 +17,16 @@ class MyClubs extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     return (
-      <Container>
-        <br/>
-        <Header as="h2" textAlign="center">My Clubs</Header>
-        <Card.Group centered itemsPerRow={6}>
-          {this.props.clubs.map((data) => <MyClubsCard key={data._id} club={data} />)}
-        </Card.Group>
-        <br/>
-      </Container>
+      <div className="background">
+        <Container>
+          <br/>
+          <Header as={'h1'} textAlign="center" inverted>My Clubs</Header>
+          <Card.Group centered itemsPerRow={6}>
+            {this.props.clubs.map((data) => <MyClubsCard key={data._id} club={data} />)}
+          </Card.Group>
+          <br/>
+        </Container>
+      </div>
     );
   }
 }
@@ -39,11 +41,11 @@ MyClubs.propTypes = {
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
 export default withTracker(() => {
   // Get access to Stuff documents.
-  const subscription = Meteor.subscribe(ClubsOwned.userPublicationName);
+  const subscription = Meteor.subscribe(Clubs.clubPublicationName);
   // Determine if the subscription is ready
   const ready = subscription.ready();
   // Get the Stuff documents
-  const clubs = ClubsOwned.collection.find({}).fetch();
+  const clubs = Clubs.collection.find({}).fetch();
   return {
     clubs,
     ready,
