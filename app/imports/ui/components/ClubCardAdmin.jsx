@@ -61,7 +61,7 @@ class ClubCardAdmin extends React.Component {
           </Label.Group>
         </Card.Content>
         <Card.Content extra>
-          <Link to={`/edit/${this.props.club._id}`}>Edit</Link>
+          <Link to={`/edit/${this.props.club._id}`} id='edit'>Edit</Link>
         </Card.Content>
       </Card>
     );

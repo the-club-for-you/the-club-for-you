@@ -40,7 +40,7 @@ const renderDropdown = ({ allowedValues, disabled, placeholder, onChange, transf
     value: val,
   }));
   return (
-    <Dropdown fluid={true} multiple={true} placeholder={placeholder} selection={true} disabled={disabled}
+    <Dropdown id='type-list' fluid={true} multiple={true} placeholder={placeholder} selection={true} disabled={disabled}
       options={options} onChange={(event, data) => onChange(data.value)} value={value}/>
   );
 };

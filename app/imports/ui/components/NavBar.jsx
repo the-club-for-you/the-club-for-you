@@ -16,17 +16,17 @@ class NavBar extends React.Component {
            Home
         </Menu.Item>
         <Menu.Item as={NavLink} activeClassName="active" exact to="/contact"
-          key='contact'>Contact</Menu.Item>
+          key='contact' id='contact-page'>Contact</Menu.Item>
         {this.props.currentUser ? (
-          [<Menu.Item as={NavLink} activeClassName="active" exact to="/clubs" key='clubs'>Clubs</Menu.Item>,
-            <Menu.Item as={NavLink} activeClassName="active" exact to="/interests" key='interest'>Interests</Menu.Item>]
+          [<Menu.Item as={NavLink} activeClassName="active" exact to="/clubs" key='clubs' id="list-clubs">Clubs</Menu.Item>,
+            <Menu.Item as={NavLink} activeClassName="active" exact to="/interests" key='interest' id='interests-page'>Interests</Menu.Item>]
         ) : ''}
         {Roles.userIsInRole(Meteor.userId(), 'club') ? (
           [<Menu.Item as={NavLink} activeClassName="active" exact to="/myclubs" key='myclubs'>My Clubs</Menu.Item>]
         ) : ''}
         {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-          [<Menu.Item as={NavLink} activeClassName="active" exact to="/edit" key='edit'>Edit Clubs</Menu.Item>,
-            <Menu.Item as={NavLink} activeClassName="active" exact to="/add" key='add'>Add a New Club</Menu.Item>]
+          [<Menu.Item as={NavLink} activeClassName="active" exact to="/edit" key='edit' id='editClubs'>Edit Clubs</Menu.Item>,
+            <Menu.Item as={NavLink} activeClassName="active" exact to="/add" key='add' id='addClub'>Add a New Club</Menu.Item>]
         ) : ''}
         <Menu.Item position="right">
           {this.props.currentUser === '' ? (
