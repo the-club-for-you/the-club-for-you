@@ -38,6 +38,8 @@ class ClubCard extends React.Component {
     return (
       <Card style={ { borderRadius: '25px' } }>
         <Image src={this.props.club.photo} wrapped ui={false} as={NavLink} to={`/clubsInfo/${this.props.club._id}`}/>
+      <Card>
+        <Image src={this.props.club.photo} wrapped ui={false} id="images" as={NavLink} to={`/clubsInfo/${this.props.club._id}`}/>
         <Card.Content as={NavLink} to={`/clubsInfo/${this.props.club._id}`}>
           <Card.Header>{this.props.club.name}</Card.Header>
           <Card.Meta>
