@@ -21,7 +21,7 @@ class ClubTypes extends React.Component {
         <Container style={ { marginLeft: '25%' } }>
           <br/>
           <Header style={ { fontSize: '400%' } } textAlign="center" inverted>Types of Clubs</Header>
-          <Card.Group centered itemsPerRow={6}>
+          <Card.Group centered itemsPerRow={6} id='interest-list'>
             {this.props.interests.map((data) => <InterestCard key={data._id} interest={data} />)}
           </Card.Group>
           <br/> <br/> <br/>

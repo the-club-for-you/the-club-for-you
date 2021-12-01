@@ -53,7 +53,7 @@ class ListClubs extends React.Component {
 
       return (
         <div> <br/><br/>
-          <Card.Group centered stackable itemsPerRow={5}>
+          <Card.Group centered stackable itemsPerRow={5} id='club-list'>
             {clubFound.map((data) => <ClubCard key={data._id} club={data} />)}
           </Card.Group>
         </div>
@@ -64,9 +64,9 @@ class ListClubs extends React.Component {
         <Container style={{ paddingLeft: '20px', paddingRight: '20px' }}>
           <br/>
           <Header style={ { fontSize: '400%' } } textAlign="center" inverted>Clubs</Header>
-          <Form style={ { marginLeft: '25%' } } onSubmit={this.handleSubmit}>
-            <Input size="huge" style={ { width: '50%' } } type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search by club's name"/>
-            <Button size="huge" color='green' onClick={this.handleClick}><Icon className="search"/>Search</Button>
+          <Form style={ { marginLeft: '25%' } } onSubmit={this.handleSubmit} id='search-bar'>
+            <Input size="huge" style={ { width: '50%' } } type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search by club's name" id='search-input'/>
+            <Button size="huge" color='green' onClick={this.handleClick} id='search-button'><Icon className="search"/>Search</Button>
           </Form>
           {findClub(searchValue, this.props.clubs)}
           <br/><br/><br/>

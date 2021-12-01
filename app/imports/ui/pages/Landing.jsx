@@ -6,8 +6,8 @@ import { NavLink } from 'react-router-dom';
 class Landing extends React.Component {
   render() {
     return (
-      <div className="home-background">
-        <Grid container id='landing-page' verticalAlign="middle" className="home">
+      <div className="home-background" id='landing-page'>
+        <Grid container verticalAlign="middle" className="home">
           <Grid.Row columns={2}>
             <Grid.Column>
               <Image src="/images/uhlogo.png"/>
