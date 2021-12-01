@@ -51,36 +51,40 @@ class EditMyClub extends React.Component {
   // Render the form. Use Uniforms: https://github.com/vazco/uniforms
   renderPage() {
     return (
-      <Grid container centered>
-        <Grid.Column>
-          <Header as="h2" textAlign="center">Edit Club</Header>
-          <AutoForm schema={bridge} onSubmit={data => this.submit(data)} model={this.props.doc}>
-            <Segment>
-              <TextField name='name' label='Title of Club' />
-              <Form.Group widths={'equal'}>
-                <TextField name='contact' label='Main Contact Name'/>
-                <TextField name='email'/>
-              </Form.Group>
-              <Form.Group widths={'equal'}>
-                <MultiSelectField name='type' />
-                <DateField name='approve' label='Approved On'/>
-                <DateField name='expire' label='Expires On'/>
-              </Form.Group>
-              <TextField name='photo' label='Photo (url)'/>
-              <LongTextField name='description' />
-              <SubmitField value='Submit'/>
-              <Button type="button" basic icon='trash' color='red' floated='right' onClick={this.open}/>
-              <Confirm
-                open={this.state.open}
-                content='Are you sure you want to delete this club? This cannot be undone.'
-                onCancel={this.close}
-                onConfirm={this.delete.bind(this)}
-              />
-              <ErrorsField/>
-            </Segment>
-          </AutoForm>
-        </Grid.Column>
-      </Grid>
+      <div className='clubs-background' style={ { marginTop: '14px' } }>
+        <Grid container centered>
+          <Grid.Column>
+            <Header style={ { fontSize: '400%' } } textAlign="center" inverted>Edit Club</Header>
+            <AutoForm schema={bridge} onSubmit={data => this.submit(data)} model={this.props.doc}>
+              <Segment>
+                <TextField name='name' label='Title of Club' />
+                <Form.Group widths={'equal'}>
+                  <TextField name='contact' label='Main Contact Name'/>
+                  <TextField name='email'/>
+                </Form.Group>
+                <Form.Group widths={'equal'}>
+                  <MultiSelectField name='type' />
+                  <DateField name='approve' label='Approved On'/>
+                  <DateField name='expire' label='Expires On'/>
+                </Form.Group>
+                <TextField name='photo' label='Photo (url)'/>
+                <TextField name='website' label='Website (url)'/>
+                <LongTextField name='description' />
+                <SubmitField value='Submit'/>
+                <Button type="button" basic icon='trash' color='red' floated='right' onClick={this.open}/>
+                <Confirm
+                  open={this.state.open}
+                  content='Are you sure you want to delete this club? This cannot be undone.'
+                  onCancel={this.close}
+                  onConfirm={this.delete.bind(this)}
+                />
+                <ErrorsField/>
+              </Segment>
+            </AutoForm>
+            <br/>
+          </Grid.Column>
+        </Grid>
+      </div>
     );
   }
 }
