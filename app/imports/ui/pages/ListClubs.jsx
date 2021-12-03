@@ -3,7 +3,9 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Header, Loader, Card, Input, Icon, Button, Form } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
+import { _ } from 'lodash';
 import { Clubs } from '../../api/club/Clubs';
+import { Favorites } from '../../api/Favorites/Favorites';
 import ClubCard from '../components/ClubCard';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
@@ -38,6 +40,9 @@ class ListClubs extends React.Component {
   // findClub(clubName, allClub) return all the clubs that match the searchValue.
   renderPage() {
     const searchValue = this.state.search;
+    const favorites = this.props.favorites;
+    console.log(this.props.favorites);
+
     function findClub(clubName, allClub) {
       const clubFound = [];
       for (let i = 0; i < allClub.length; i++) {
@@ -54,7 +59,10 @@ class ListClubs extends React.Component {
       return (
         <div> <br/><br/>
           <Card.Group centered stackable itemsPerRow={5}>
-            {clubFound.map((data) => <ClubCard key={data._id} club={data} />)}
+            {clubFound.map((data) => <ClubCard
+              key={data._id} club={data}
+              favorite={_.find(favorites, function (fav) { return fav.favorite === data._id; })}
+            />)}
           </Card.Group>
         </div>
       );
@@ -79,6 +87,7 @@ class ListClubs extends React.Component {
 // Require an array of Stuff documents in the props.
 ListClubs.propTypes = {
   clubs: PropTypes.array.isRequired,
+  favorites: PropTypes.array.isRequired,
   filter: PropTypes.string,
   ready: PropTypes.bool.isRequired,
 };
@@ -87,12 +96,15 @@ ListClubs.propTypes = {
 export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe(Clubs.userPublicationName);
+  const subscription2 = Meteor.subscribe(Favorites.userPublicationName);
   // Determine if the subscription is ready
-  const ready = subscription.ready();
+  const ready = subscription.ready() && subscription2.ready();
   // Get the Stuff documents
   const clubs = Clubs.collection.find({}).fetch();
+  const favorites = Favorites.collection.find({ owner: Meteor.user().username }).fetch();
   return {
     clubs,
+    favorites,
     ready,
   };
 })(ListClubs);

@@ -1,6 +1,7 @@
 import React from 'react';
 import swal from 'sweetalert';
 import { Button, Card, Icon, Image, Label } from 'semantic-ui-react';
+import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
 import { withRouter, NavLink } from 'react-router-dom';
 import { Favorites } from '../../api/Favorites/Favorites';
@@ -8,27 +9,37 @@ import { Favorites } from '../../api/Favorites/Favorites';
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class ClubCard extends React.Component {
 
-  submit(data) {
-    const name = this.props.club.name;
-    const approve = this.props.club.approve;
-    const expire = this.props.club.expire;
-    const type = this.props.club.type;
-    const contact = this.props.club.contact;
-    const email = this.props.club.email;
-    const description = this.props.club.description;
-    const _id = this.props.club._id;
-    let { photo } = data;
-    if (photo == null) {
-      photo = 'default';
+  addFavorite() {
+    if (this.props.favorite) {
+      const _id = this.props.favorite._id;
+      console.log('else');
+      Favorites.collection.remove({ _id },
+        (error) => {
+          if (error) {
+            swal('Error', error.message, 'error');
+          } else {
+            swal('Success', 'Club removed from Favorites', 'success');
+          }
+        });
+    } else {
+      const owner = Meteor.user().username;
+      const favorite = this.props.club._id;
+      Favorites.collection.insert({ owner, favorite },
+        (error) => {
+          if (error) {
+            swal('Error', error.message, 'error');
+          } else {
+            swal('Success', 'Club added to Favorites', 'success');
+          }
+        });
     }
-    Favorites.collection.insert(_id, { $set: { name, approve, expire, type, contact, email, description, photo } },
-      (error) => {
-        if (error) {
-          swal('Error', error.message, 'error');
-        } else {
-          swal('Success', 'Club added to Favorites', 'success');
-        }
-      });
+  }
+
+  buttonColor() {
+    if (this.props.favorite) {
+      return 'red';
+    }
+    return 'grey';
   }
 
   render() {
@@ -88,7 +99,7 @@ class ClubCard extends React.Component {
         </Card.Content>
 
         <Card.Content extra>
-          <Button onClick={data => this.submit(data)}>
+          <Button color={this.buttonColor()} onClick={this.addFavorite.bind(this)}>
             <Icon name="heart"/>
           </Button>
         </Card.Content>
@@ -110,6 +121,11 @@ ClubCard.propTypes = {
     type: PropTypes.array,
     _id: PropTypes.string,
   }).isRequired,
+  favorite: PropTypes.shape({
+    owner: PropTypes.String,
+    favorite: PropTypes.String,
+    _id: PropTypes.String,
+  }),
 };
 
 // Wrap this component in withRouter since we use the <Link> React Router element.
