@@ -3,22 +3,25 @@ import swal from 'sweetalert';
 import { Button, Card, Icon, Image, Label } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, NavLink } from 'react-router-dom';
-import SimpleSchema from 'simpl-schema';
-import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { Favorites } from '../../api/Favorites/Favorites';
-
-const favoriteSchema = new SimpleSchema({
-  owner: { type: String, optional: true },
-});
-
-const bridge = new SimpleSchema2Bridge(favoriteSchema);
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class ClubCard extends React.Component {
 
-  submit(owner) {
+  submit(data) {
+    const name = this.props.club.name;
+    const approve = this.props.club.approve;
+    const expire = this.props.club.expire;
+    const type = this.props.club.type;
+    const contact = this.props.club.contact;
+    const email = this.props.club.email;
+    const description = this.props.club.description;
     const _id = this.props.club._id;
-    Favorites.collection.insert(_id, { $set: { owner } },
+    let { photo } = data;
+    if (photo == null) {
+      photo = 'default';
+    }
+    Favorites.collection.insert(_id, { $set: { name, approve, expire, type, contact, email, description, photo } },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -83,8 +86,9 @@ class ClubCard extends React.Component {
             </Label>)}
           </Label.Group>
         </Card.Content>
+
         <Card.Content extra>
-          <Button schema={bridge} onClick={data => this.submit(data)}>
+          <Button onClick={data => this.submit(data)}>
             <Icon name="heart"/>
           </Button>
         </Card.Content>
@@ -100,9 +104,11 @@ ClubCard.propTypes = {
     photo: PropTypes.string,
     approve: PropTypes.any,
     expire: PropTypes.any,
+    contact: PropTypes.string,
+    email: PropTypes.string,
+    description: PropTypes.string,
     type: PropTypes.array,
     _id: PropTypes.string,
-    owner: PropTypes.string,
   }).isRequired,
 };
 

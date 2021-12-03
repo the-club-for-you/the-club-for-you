@@ -2,12 +2,17 @@ import { Meteor } from 'meteor/meteor';
 import { Clubs } from '../../api/club/Clubs';
 import { Interests } from '../../api/interest/Interests';
 import { Types } from '../../api/types/Types';
+import { Favorites } from '../../api/Favorites';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
 
 Meteor.publish(Clubs.userPublicationName, function () {
   return Clubs.collection.find();
+});
+
+Meteor.publish(Favorites.userPublicationName, function () {
+  return Favorites.collection.find();
 });
 
 // for MyClubs
