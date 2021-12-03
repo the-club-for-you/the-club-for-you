@@ -4,6 +4,8 @@ import SimpleSchema from 'simpl-schema';
 import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-semantic';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import swal from 'sweetalert';
+import { Meteor } from 'meteor/meteor';
+import * as Console from 'console';
 
 const formSchema = new SimpleSchema({
   email: String,
@@ -14,7 +16,14 @@ const bridge = new SimpleSchema2Bridge(formSchema);
 class Reset extends React.Component {
   submit(data) {
     const { email } = data;
-    console.log(email);
+    Console.log(email);
+    Meteor.call(
+      'sendEmail',
+      email,
+      'uhtheclubforyou@gmail.com',
+      'Reset Password For The Club For You',
+      'Some Password Link',
+    );
     swal('Success', 'Password reset email sent', 'success');
   }
 
