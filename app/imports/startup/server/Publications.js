@@ -11,6 +11,10 @@ Meteor.publish(Clubs.userPublicationName, function () {
   return Clubs.collection.find();
 });
 
+Meteor.publish(Favorites.userPublicationName, function () {
+  return Favorites.collection.find();
+});
+
 // for MyClubs
 Meteor.publish(Clubs.clubPublicationName, function () {
   if (this.userId) {
