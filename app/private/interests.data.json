@@ -1,51 +1,51 @@
 {
   "defaultInterests": [
     {
-      "name": "academic",
+      "name": "Academic",
       "icon": "pencil alternate"
     },
     {
-      "name": "cultural",
+      "name": "Cultural",
       "icon": "american sign language interpreting"
     },
     {
-      "name": "ethnic",
+      "name": "Ethnic",
       "icon": "globe"
     },
     {
-      "name": "fraternity or sorority",
+      "name": "Fraternity or Sorority",
       "icon": "university"
     },
     {
-      "name": "honorary society",
+      "name": "Honorary Society",
       "icon": "shield alternate"
     },
     {
-      "name": "leisure",
+      "name": "Leisure",
       "icon": "headphones"
     },
     {
-      "name": "political",
+      "name": "Political",
       "icon": "bullhorn"
     },
     {
-      "name": "professional",
+      "name": "Professional",
       "icon": "user md"
     },
     {
-      "name": "recreational",
+      "name": "Recreational",
       "icon": "child"
     },
     {
-      "name": "religious",
+      "name": "Religious",
       "icon": "road"
     },
     {
-      "name": "spiritual",
+      "name": "Spiritual",
       "icon": "sun outline"
     },
     {
-      "name": "sports",
+      "name": "Sports",
       "icon": "quidditch"
     }
   ]

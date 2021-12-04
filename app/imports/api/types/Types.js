@@ -8,19 +8,19 @@ class TypesCollection {
     this.collection = new Mongo.Collection(this.name);
     // Define the structure of each document in the collection.
     this.list = [
-      'academic',
-      'cultural',
-      'ethnic',
-      'fraternity or sorority',
-      'honorary society',
-      'leisure',
-      'political',
-      'professional',
-      'recreational',
-      'religious',
-      'service',
-      'spiritual',
-      'sports',
+      'Academic',
+      'Cultural',
+      'Ethnic',
+      'Fraternity or Sorority',
+      'Honorary Society',
+      'Leisure',
+      'Political',
+      'Professional',
+      'Recreational',
+      'Religious',
+      'Service',
+      'Spiritual',
+      'Sports',
     ];
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);
