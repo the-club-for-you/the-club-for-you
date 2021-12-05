@@ -11,7 +11,9 @@ class InterestCard extends React.Component {
       <Card as={ NavLink }
         exact
         to={`/clubtype/${this.props.interest.name}` }>
-        <Icon className={this.props.interest.icon} circular />
+        <br></br>
+        <Icon color={'green'} fitted size='huge' name={this.props.interest.icon} />
+        <br></br>
         <Card.Content>
           <Card.Header>{this.props.interest.name}</Card.Header>
           <Card.Meta>
