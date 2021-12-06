@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Clubs } from '../../api/club/Clubs';
 import { Interests } from '../../api/interest/Interests';
 import { Types } from '../../api/types/Types';
+import { Token } from '../../api/token/token';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
@@ -21,6 +22,10 @@ Meteor.publish(Clubs.clubPublicationName, function () {
 
 Meteor.publish(Interests.userPublicationName, function () {
   return Interests.collection.find();
+});
+
+Meteor.publish(Token.userPublicationName, function () {
+  return Token.collection.find();
 });
 
 Meteor.publish(Types.userPublicationName, function () {

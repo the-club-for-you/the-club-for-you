@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Clubs } from '../../api/club/Clubs.js';
 import { Interests } from '../../api/interest/Interests.js';
+import { Token } from '../../api/token/token.js';
 
 /* eslint-disable no-console */
 
@@ -14,6 +15,11 @@ function addClubs(clubs) {
 function addInterests(interests) {
   console.log(`  Adding: ${interests.name}`);
   Interests.collection.insert(interests);
+}
+
+function addToken(tokens) {
+  console.log(`  Adding: ${tokens.token}`);
+  Token.collection.insert(tokens);
 }
 
 /**
@@ -36,4 +42,11 @@ if ((Meteor.settings.loadAssetsFile) && (Interests.collection.find().count() < 7
   console.log(`Loading data from private/${interestsAssetsFileName}`);
   const jsonData = JSON.parse(Assets.getText(interestsAssetsFileName));
   jsonData.defaultInterests.map(interests => addInterests(interests));
+}
+
+if ((Meteor.settings.loadAssetsFile) && (Token.collection.find().count() < 7)) {
+  const TokenAssetsFileName = 'token.data.json';
+  console.log(`Loading data from private/${TokenAssetsFileName}`);
+  const jsonData = JSON.parse(Assets.getText(TokenAssetsFileName));
+  jsonData.defaultToken.map(tokens => addToken(tokens));
 }

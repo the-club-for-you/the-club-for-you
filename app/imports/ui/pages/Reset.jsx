@@ -5,10 +5,13 @@ import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-semantic
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
+import { Random } from 'meteor/random';
 import * as Console from 'console';
+import { Token } from '../../api/token/token';
 
 const formSchema = new SimpleSchema({
   email: String,
+  token: { type: String, optional: true },
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
@@ -17,12 +20,18 @@ class Reset extends React.Component {
   submit(data) {
     const { email } = data;
     Console.log(email);
+    const token = Random.secret();
+    Meteor.setTimeout(Token.collection.insert({ email: email, token: token }), 120000);
+    Console.log(token);
+    Console.log(`${Token.collection.findOne({ email: email }).token}`);
     Meteor.call(
       'sendEmail',
       email,
       'uhtheclubforyou@gmail.com',
       'Reset Password For The Club For You',
-      'Some Password Link',
+      `Here is the link to reset the password: http://localhost:3000/#/reset-password
+       The access token will be: ${token} 
+       (this token will be expire in two mintues)`,
     );
     swal('Success', 'Password reset email sent', 'success');
   }

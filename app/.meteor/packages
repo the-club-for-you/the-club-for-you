@@ -42,3 +42,4 @@ montiapm:agent                   # see http://montiapm.com
 zodern:hide-production-sourcemaps
 email
 check
+ostrio:flow-router-extra
