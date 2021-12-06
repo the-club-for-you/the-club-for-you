@@ -6,11 +6,9 @@ import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { _ } from 'lodash';
 import * as Console from 'console';
+import swal from 'sweetalert';
 import { Token } from '../../api/token/token';
 
-/**
- * Signup component is similar to signin component, but we create a new user instead.
- */
 class ResetPassword extends React.Component {
 
   /* Initialize state fields. */
@@ -28,27 +26,30 @@ class ResetPassword extends React.Component {
     this.setState({ [name]: value });
   }
 
-  /* Handle Signup submission. Create user account and a profile entry, then redirect to the home page. */
   submit = () => {
     const { token, password } = this.state;
-    let id;
-    const email = _.find(this.props.tokens, (tokens) => tokens.token === token).email;
-    if (email.length !== 0) {
+    const userFound = _.find(this.props.tokens, (tokens) => tokens.token === token);
+    if (userFound !== undefined) {
+      const email = userFound.email;
       Console.log(email);
-      id = Meteor.call('findId', token);
+      Meteor.call(
+        'findId', email,
+        (err, result) => {
+          if (err) {
+            swal('Error', 'Reset Password fail', 'error');
+          } else {
+            Meteor.call('userUpdate', result, password, token);
+            swal('Success', 'Reset Password Success', 'success');
+          }
+        },
+      );
+    } else {
+      swal('Error', 'Token Incorrect', 'error');
     }
-    Console.log(id);
-    Meteor.call(
-      'userUpdate',
-      id,
-      password,
-    );
   }
 
-  /* Display the signup form. Redirect to add page after successful registration and login. */
   renderPage() {
     const { from } = this.props.location.state || { from: { pathname: '/' } };
-    // if correct authentication, redirect to from: page instead of signup screen
     if (this.state.redirectToReferer) {
       return <Redirect to={from}/>;
     }
@@ -59,7 +60,7 @@ class ResetPassword extends React.Component {
             <Grid.Column className='information'>
               <br/>
               <Header as="h1" textAlign="center" inverted>
-                Register your account
+                Reset your password
               </Header>
               <Form onSubmit={this.submit}>
                 <Segment stacked>
@@ -89,18 +90,9 @@ class ResetPassword extends React.Component {
               <Message>
                 Already have an account? Login <Link to="/signin">here</Link>
               </Message>
-              <Message>Forget your password? Reset <Link to="/resetpassword" position="right">here</Link>
+              <Message>Don`t have an account? Sign up <Link to="/signup" position="right">here</Link>
               </Message>
               <br/>
-              {this.state.error === '' ? (
-                ''
-              ) : (
-                <Message
-                  error
-                  header="Reset Password was not successful"
-                  content={this.state.error}
-                />
-              )}
             </Grid.Column>
           </Grid>
         </Container>
@@ -117,11 +109,11 @@ ResetPassword.propTypes = {
 };
 
 export default withTracker(() => {
-  // Get access to Stuff documents.
+  // Get access to Token documents.
   const subscription = Meteor.subscribe(Token.userPublicationName);
   // Determine if the subscription is ready
   const ready = subscription.ready();
-  // Get the Stuff documents
+  // Get the Token documents
   const tokens = Token.collection.find({}).fetch();
   return {
     tokens,

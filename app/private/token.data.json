@@ -3,6 +3,10 @@
     {
       "email": "malialiu@hawaii.edu",
       "token": "1"
+    },
+    {
+      "email": "john@foo.com",
+      "token": "2"
     }
   ]
 }
