@@ -76,7 +76,7 @@ class ListClubs extends React.Component {
       <div className='clubs-background'>
         <Container style={{ paddingLeft: '20px', paddingRight: '20px' }}>
           <br/>
-          <Button onClick={this.returnClick} color={'green'}><Icon className='arrow left'/></Button>
+          <Button onClick={this.returnClick} color={'green'}>Back <Icon className='arrow left'/></Button>
           <Header style={ { fontSize: '400%' } } textAlign="center" inverted>Clubs</Header>
           <Form style={ { marginLeft: '25%' } } onSubmit={this.handleSubmit} id='search-bar'>
             <Input size="huge" style={ { width: '50%' } } type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search by club's name" id='search-input'/>
