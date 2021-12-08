@@ -65,7 +65,7 @@ class FavoriteClubCard extends React.Component {
     );
   }
 }
-
+//
 // Require a document to be passed to this component.
 FavoriteClubCard.propTypes = {
   club: PropTypes.shape({
