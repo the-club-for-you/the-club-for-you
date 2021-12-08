@@ -1,35 +1,10 @@
 import React from 'react';
-import swal from 'sweetalert';
-import { Button, Card, Icon, Image, Label } from 'semantic-ui-react';
+import { Card, Image, Label } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, NavLink } from 'react-router-dom';
-import { Favorites } from '../../api/Favorites/Favorites';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
-class ClubCard extends React.Component {
-
-  submit(data) {
-    const name = this.props.club.name;
-    const approve = this.props.club.approve;
-    const expire = this.props.club.expire;
-    const type = this.props.club.type;
-    const contact = this.props.club.contact;
-    const email = this.props.club.email;
-    const description = this.props.club.description;
-    const _id = this.props.club._id;
-    let { photo } = data;
-    if (photo == null) {
-      photo = 'default';
-    }
-    Favorites.collection.insert(_id, { $set: { name, approve, expire, type, contact, email, description, photo } },
-      (error) => {
-        if (error) {
-          swal('Error', error.message, 'error');
-        } else {
-          swal('Success', 'Club added to Favorites', 'success');
-        }
-      });
-  }
+class FavoriteClubCard extends React.Component {
 
   render() {
     const clubTypes = [
@@ -86,31 +61,23 @@ class ClubCard extends React.Component {
             </Label>)}
           </Label.Group>
         </Card.Content>
-
-        <Card.Content extra>
-          <Button onClick={data => this.submit(data)}>
-            <Icon name="heart"/>
-          </Button>
-        </Card.Content>
       </Card>
     );
   }
 }
 
 // Require a document to be passed to this component.
-ClubCard.propTypes = {
+FavoriteClubCard.propTypes = {
   club: PropTypes.shape({
     name: PropTypes.string,
     photo: PropTypes.string,
     approve: PropTypes.any,
     expire: PropTypes.any,
-    contact: PropTypes.string,
-    email: PropTypes.string,
-    description: PropTypes.string,
     type: PropTypes.array,
     _id: PropTypes.string,
+    owner: PropTypes.string,
   }).isRequired,
 };
 
 // Wrap this component in withRouter since we use the <Link> React Router element.
-export default withRouter(ClubCard);
+export default withRouter(FavoriteClubCard);
