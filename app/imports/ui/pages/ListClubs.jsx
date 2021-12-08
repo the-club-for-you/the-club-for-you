@@ -63,7 +63,7 @@ class ListClubs extends React.Component {
 
       return (
         <div> <br/><br/>
-          <Card.Group centered stackable itemsPerRow={5}>
+          <Card.Group centered stackable itemsPerRow={5} id="club-list" >
             {clubFound.map((data) => <ClubCard
               key={data._id} club={data}
               favorite={_.find(favorites, function (fav) { return fav.favorite === data._id; })}
