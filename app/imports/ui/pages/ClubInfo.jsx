@@ -27,7 +27,7 @@ class ClubInfo extends React.Component {
     }
     Clubs.collection.find(_id, { $set: { name, approve, expire, type, contact, email, description, photo, website } }, (error) => (error ?
       swal('Error', error.message, 'error') :
-      swal('Success', 'Item updated successfully', 'success')));
+      swal('Success', 'Club find successfully', 'success')));
   }
 
   render() {
