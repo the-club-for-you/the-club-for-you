@@ -21,13 +21,14 @@ class Reset extends React.Component {
     const { email } = data;
     Console.log(email);
     const token = Random.secret();
-    Token.collection.insert({ email: email, token: token });
+    Token.collection.insert({ email: email, token: token, time: new Date() });
     Meteor.call(
       'sendEmail',
       email,
       'uhtheclubforyou@gmail.com',
       'Reset Password For The Club For You',
-      `Here is the link to reset the password: http://localhost:3000/#/reset-password
+      `Here is the link to reset the password: ${Meteor.absoluteUrl()}#/reset-password/${Token.collection.findOne({ token: token })._id}
+      (if the link doesn't work please copy and paste, then try again.)
        The access token will be: ${token} 
        (this token will be expire in two mintues)`,
     );

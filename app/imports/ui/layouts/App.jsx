@@ -44,7 +44,7 @@ class App extends React.Component {
             <Route path="/clubtype" component={Interests}/>
             <Route path="/contact" component={Contact}/>
             <Route path="/clubsInfo/:_id" component={ClubInfo}/>
-            <Route path="/reset-password" component={ResetPassword}/>
+            <Route path="/reset-password/:_id" component={ResetPassword}/>
             <ProtectedRoute path="/list" component={ListClubs}/>
             <ProtectedRoute path="/add" component={AddClub}/>
             <ProtectedRoute path="/edit/:_id" component={EditClub}/>

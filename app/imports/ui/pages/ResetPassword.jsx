@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Container, Form, Grid, Header, Loader, Message, Segment } from 'semantic-ui-react';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
-import { _ } from 'lodash';
 import * as Console from 'console';
 import swal from 'sweetalert';
 import { Token } from '../../api/token/token';
@@ -28,9 +27,8 @@ class ResetPassword extends React.Component {
 
   submit = () => {
     const { token, password } = this.state;
-    const userFound = _.find(this.props.tokens, (tokens) => tokens.token === token);
-    if (userFound !== undefined) {
-      const email = userFound.email;
+    if (this.props.tokens.token === token) {
+      const email = this.props.tokens.email;
       Console.log(email);
       Meteor.call(
         'findId', email,
@@ -49,9 +47,10 @@ class ResetPassword extends React.Component {
   }
 
   renderPage() {
-    const { from } = this.props.location.state || { from: { pathname: '/' } };
-    if (this.state.redirectToReferer) {
-      return <Redirect to={from}/>;
+    if (this.props.tokens.time !== undefined) {
+      if ((new Date() - this.props.tokens.time) >= 1800000) {
+        Token.collection.remove(this.props.tokens._id);
+      }
     }
     return (
       <div className='clubsInfo-background'>
@@ -103,18 +102,19 @@ class ResetPassword extends React.Component {
 
 /* Ensure that the React Router location object is available in case we need to redirect. */
 ResetPassword.propTypes = {
-  location: PropTypes.object,
   ready: PropTypes.bool.isRequired,
-  tokens: PropTypes.array.isRequired,
+  tokens: PropTypes.object,
 };
 
-export default withTracker(() => {
+export default withTracker(({ match }) => {
+  const documentId = match.params._id;
   // Get access to Token documents.
   const subscription = Meteor.subscribe(Token.userPublicationName);
   // Determine if the subscription is ready
   const ready = subscription.ready();
   // Get the Token documents
-  const tokens = Token.collection.find({}).fetch();
+  const tokens = Token.collection.findOne(documentId);
+  Console.log(tokens);
   return {
     tokens,
     ready,

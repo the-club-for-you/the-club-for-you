@@ -24,6 +24,9 @@ if (Meteor.isServer || Meteor.users) {
       check([email], [String]);
       return Meteor.users.findOne({ username: email })._id;
     },
+    getCurrentTime: function () {
+      return this.getCurrentTime.format('MMM DD HH:mm:ss');
+    },
     userUpdate: function (id, password, token) {
       check([id, password, token], [String]);
       // Update account

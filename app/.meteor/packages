@@ -43,3 +43,4 @@ zodern:hide-production-sourcemaps
 email
 check
 ostrio:flow-router-extra
+momentjs:moment
