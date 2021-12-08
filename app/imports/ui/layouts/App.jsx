@@ -24,6 +24,7 @@ import MyClubs from '../pages/MyClubs';
 import Contact from '../pages/Contact';
 import ClubInfo from '../pages/ClubInfo';
 import ResetPassword from '../pages/ResetPassword';
+import Favorites from '../pages/FavoriteClubs';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -43,6 +44,7 @@ class App extends React.Component {
             <Route path="/clubtype/:type" component={ListClubsFilter}/>
             <Route path="/clubtype" component={Interests}/>
             <Route path="/contact" component={Contact}/>
+            <Route path="/favorites" component={Favorites}/>
             <Route path="/clubsInfo/:_id" component={ClubInfo}/>
             <Route path="/reset-password/:_id" component={ResetPassword}/>
             <ProtectedRoute path="/list" component={ListClubs}/>
