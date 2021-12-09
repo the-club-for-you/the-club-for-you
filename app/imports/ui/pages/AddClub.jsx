@@ -73,7 +73,7 @@ class AddClub extends React.Component {
                 <TextField name='photo' label='Photo (url)'/>
                 <TextField name='website' label='Website (url)'/>
                 <LongTextField name='description' id='description'/>
-                <SubmitField value='Submit'/>
+                <SubmitField value='Submit' id="submit-addclub"/>
                 <ErrorsField/>
               </Segment>
             </AutoForm>

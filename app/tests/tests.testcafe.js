@@ -6,12 +6,14 @@ import { listClubs } from './listclubs.component';
 import { interests } from './interests.component';
 import { listClubsAdmin } from './listClubsAdmin.page.js';
 import { addClubPage } from './addclub.page';
+import { favorites } from './favorites.component';
 
 /* global fixture:false, test:false */
 
 /** Credentials for one of the sample users defined in settings.development.json. */
 const credentials = { username: 'john@foo.com', password: 'changeme' };
 const credentials2 = { username: 'admin@foo.com', password: 'changeme' };
+const credentials3 = { username: 'malialiu@hawaii.edu', password: 'm' };
 
 fixture('meteor-application-template-react localhost test with default db')
   .page('http://localhost:3000');
@@ -67,6 +69,35 @@ test('Test that add club page work.', async (testController) => {
   await navBar.isLoggedIn(testController, credentials2.username);
   await navBar.gotoAddClubPage(testController);
   await addClubPage.addClub(testController);
+  await navBar.gotoListClubPage(testController);
+  await addClubPage.findAddedClub(testController);
+  await listClubs.gotoClubInfoPage(testController);
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
+});
+
+test('Test that favorites page work.', async (testController) => {
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.isLoggedIn(testController, credentials.username);
+  await navBar.gotoListClubPage(testController);
+  await favorites.addFavorites(testController);
+  await navBar.gotoFavoritesPage(testController);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
+});
+
+test('Test that sign up and reset password page work.', async (testController) => {
+  await testController.click('#login-dropdown');
+  await testController.click('#login-dropdown-sign-up');
+  await testController.typeText('#signup-form-email', 'malialiu@hawaii.edu');
+  await testController.typeText('#signup-form-password', 'm');
+  await testController.click('#signup-form-submit');
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, credentials3.username, credentials3.password);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
+  await testController.click('#login-dropdown');
+  await testController.click('#login-dropdown-sign-up');
+  await testController.click('#reset-password');
 });

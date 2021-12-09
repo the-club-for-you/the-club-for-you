@@ -98,7 +98,7 @@ class ClubCard extends React.Component {
           </Label.Group>
         </Card.Content>
         <Card.Content extra>
-          <Button color={this.buttonColor()} onClick={this.addFavorite.bind(this)}>
+          <Button id={'favorites'} color={this.buttonColor()} onClick={this.addFavorite.bind(this)}>
             <Icon name="heart"/>
           </Button>
         </Card.Content>
