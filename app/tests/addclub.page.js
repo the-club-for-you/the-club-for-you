@@ -14,7 +14,16 @@ class AddClub {
     await testController.typeText('#approvedDate', '2021-11-03T05:00');
     await testController.typeText('#expireDate', '2022-11-03T05:00');
     await testController.typeText('#owner', 'admin@foo.com');
+    await testController.typeText('#description', 'test');
+    await testController.click('#submit-addclub');
     await testController.pressKey('enter');
+  }
+
+  async findAddedClub(testController) {
+    await Selector('#search-bar').exists;
+    await testController.click('#search-bar');
+    await testController.typeText('#search-input', 'Test');
+    await testController.click('#search-button');
   }
 }
 

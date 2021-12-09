@@ -8,7 +8,7 @@ class InterestCard extends React.Component {
 
   render() {
     return (
-      <Card as={ NavLink }
+      <Card as={ NavLink } id={`${this.props.interest.name}`}
         exact
         to={`/clubtype/${this.props.interest.name}` }>
         <br></br>

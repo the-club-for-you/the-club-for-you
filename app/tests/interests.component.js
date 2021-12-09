@@ -4,7 +4,7 @@ class ClubTypes {
 
   async gotoListClubsFilterPage(testController) {
     await Selector('#interest-list').exists;
-    await testController.click('#interest-list');
+    await testController.click('#academic');
   }
 }
 
