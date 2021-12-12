@@ -8,10 +8,8 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import ListClubs from '../pages/ListClubs';
-import ListClubsFilter from '../pages/ListClubsFilter';
 import ListClubsAdmin from '../pages/ListClubsAdmin';
 import AddClub from '../pages/AddClub';
-import EditStuff from '../pages/EditStuff';
 import EditClub from '../pages/EditClub';
 import EditMyClub from '../pages/EditMyClub';
 import NotFound from '../pages/NotFound';
@@ -39,10 +37,8 @@ class App extends React.Component {
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>
             <Route path="/resetpassword" component={Reset}/>
-            <Route path="/clubs" component={ListClubs}/>
+            <Route path="/clubs/:type" component={ListClubs}/>
             <Route path="/interests" component={Interests}/>
-            <Route path="/clubtype/:type" component={ListClubsFilter}/>
-            <Route path="/clubtype" component={Interests}/>
             <Route path="/contact" component={Contact}/>
             <Route path="/favorites" component={Favorites}/>
             <Route path="/clubsInfo/:_id" component={ClubInfo}/>
@@ -52,7 +48,6 @@ class App extends React.Component {
             <ProtectedRoute path="/edit/:_id" component={EditClub}/>
             <AdminProtectedRoute path="/edit" component={ListClubsAdmin}/>
             <AdminProtectedRoute path="/add" component={AddClub}/>
-            <AdminProtectedRoute path="/edit/:_id" component={EditStuff}/>
             <AdminProtectedRoute path="/edit/:_id" component={EditClub}/>
             <AdminProtectedRoute path="/admin" component={ListClubsAdmin}/>
             <ClubProtectedRoute path="/myclubs/edit/:_id" component={EditMyClub}/>
