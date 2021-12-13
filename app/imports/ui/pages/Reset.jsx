@@ -30,7 +30,7 @@ class Reset extends React.Component {
       `Here is the link to reset the password: ${Meteor.absoluteUrl()}#/reset-password/${Token.collection.findOne({ token: token })._id}
       (if the link doesn't work please copy and paste, then try again.)
        The access token will be: ${token} 
-       (this token will be expire in two mintues)`,
+       (this token will be expire in 30 minutes)`,
     );
     swal('Success', 'Reset password email sent', 'success');
   }

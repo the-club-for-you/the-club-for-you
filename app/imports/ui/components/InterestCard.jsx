@@ -10,7 +10,7 @@ class InterestCard extends React.Component {
     return (
       <Card as={ NavLink } id={`${this.props.interest.name}`}
         exact
-        to={`/clubtype/${this.props.interest.name}` }>
+        to={`/clubs/${this.props.interest.name}` }>
         <br></br>
         <Icon color={'green'} fitted size='huge' name={this.props.interest.icon} />
         <br></br>
