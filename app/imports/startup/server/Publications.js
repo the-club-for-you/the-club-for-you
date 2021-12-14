@@ -37,10 +37,6 @@ Meteor.publish(Types.userPublicationName, function () {
   return Types.collection.find();
 });
 
-Meteor.publish(Favorites.userPublicationName, function () {
-  return Favorites.collection.find();
-});
-
 // alanning:roles publication
 // Recommended code to publish roles for each user.
 Meteor.publish(null, function () {

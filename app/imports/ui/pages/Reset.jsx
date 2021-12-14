@@ -20,19 +20,28 @@ class Reset extends React.Component {
   submit(data) {
     const { email } = data;
     Console.log(email);
-    const token = Random.secret();
-    Token.collection.insert({ email: email, token: token, time: new Date() });
     Meteor.call(
-      'sendEmail',
-      email,
-      'uhtheclubforyou@gmail.com',
-      'Reset Password For The Club For You',
-      `Here is the link to reset the password: ${Meteor.absoluteUrl()}#/reset-password/${Token.collection.findOne({ token: token })._id}
+      'findId', email,
+      (err) => {
+        if (err) {
+          swal('Error', 'Not user exist', 'error');
+        } else {
+          const token = Random.secret();
+          Token.collection.insert({ email: email, token: token, time: new Date() });
+          Meteor.call(
+            'sendEmail',
+            email,
+            'uhtheclubforyou@gmail.com',
+            'Reset Password For The Club For You',
+            `Here is the link to reset the password: ${Meteor.absoluteUrl()}#/reset-password/${Token.collection.findOne({ token: token })._id}
       (if the link doesn't work please copy and paste, then try again.)
        The access token will be: ${token} 
        (this token will be expire in 30 minutes)`,
+          );
+          swal('Success', 'Reset password email sent', 'success');
+        }
+      },
     );
-    swal('Success', 'Reset password email sent', 'success');
   }
 
   render() {
@@ -40,12 +49,13 @@ class Reset extends React.Component {
     return (
       <div className='reset-background'>
         <Container>
-          <Header textAlign='center' inverted>Forget your password?</Header>
+          <Header textAlign='center' inverted size={'huge'}>Reset Password</Header>
           <Grid columns='2' verticalAlign='middle' container>
             <Grid.Column>
-              <p>Enter the email address associated with your account in the text field to the right. We will then send an email to that address containing a link that will redirect you to a page where you can reset the password for your
-                account. This link will expire within 30 minutes of your request, when a new password reset request is sent, or the password being changed, whichever comes first.</p>
-              <p>If you do not remember the email address associated with your account, send an email to help@foo.com and one of our trained technicians will help you restore your account.</p>
+              <p>Please enter your email address to the text field. If the system finds that user exist, it will send an email with token and link to reset the password. If the link is not working when you click on them,
+                please try copy and paste the url to go to the page.
+                The token and link will expire in 30 minutes or expire when you reset your password successfully. If you having troubles to reset the password, please contact to the following email: malialiu@hawaii.edu. </p>
+              <p>If you do not remember the email address associated with your account, send an email to malialiu@hawaii.edu and we will help you to restore your account. Thank you so much for using The Club For You. </p>
             </Grid.Column>
 
             <Grid.Column>

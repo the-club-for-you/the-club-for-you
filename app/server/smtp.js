@@ -7,7 +7,11 @@ import { Token } from '../imports/api/token/token';
 if (Meteor.isServer || Meteor.users) {
 
   Meteor.startup(function () {
-    process.env.MAIL_URL = 'smtps://uhtheclubforyou:uhtheclubforyou314@smtp.gmail.com:465';
+    if (Meteor.settings && Meteor.settings.smtp) {
+      const { userName, password, host, port, isSecure } = Meteor.settings.smtp;
+      const scheme = isSecure ? 'smtps' : 'smtp';
+      process.env.MAIL_URL = `${scheme}://${encodeURIComponent(userName)}:${encodeURIComponent(password)}@${host}:${port}`;
+    }
   });
 
   Meteor.methods({

@@ -114,7 +114,6 @@ export default withTracker(({ match }) => {
   const ready = subscription.ready();
   // Get the Token documents
   const tokens = Token.collection.findOne(documentId);
-  Console.log(tokens);
   return {
     tokens,
     ready,
