@@ -7,6 +7,7 @@ import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import swal from 'sweetalert';
 import { NavLink } from 'react-router-dom';
 import { Clubs } from '../../api/club/Clubs';
+import ClubEvents from '../components/ClubEvents';
 
 const bridge = new SimpleSchema2Bridge(Clubs.schema);
 
@@ -51,7 +52,7 @@ class ClubInfo extends React.Component {
                   horizontal
                   as={ NavLink }
                   exact
-                  to={`/clubtype/${data}`}
+                  to={`/clubs/${data}`}
                 >
                   {data}
                 </Label>)}
@@ -73,6 +74,11 @@ class ClubInfo extends React.Component {
                 <a href={this.props.doc.website}> {this.props.doc.website}</a>
               </Header>
               <br/>
+            </Grid.Row>
+            <Grid.Row>
+              <Header as='h2'>Events</Header>
+              <br />
+              <ClubEvents club={this.props.doc._id} owner={this.props.doc.owner === Meteor.user().username}/>
             </Grid.Row>
           </Container>
         </Grid>

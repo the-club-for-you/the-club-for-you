@@ -4,6 +4,7 @@ import { Interests } from '../../api/interest/Interests';
 import { Types } from '../../api/types/Types';
 import { Token } from '../../api/token/token';
 import { Favorites } from '../../api/Favorites/Favorites';
+import { Events } from '../../api/event/Events';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
@@ -39,6 +40,10 @@ Meteor.publish(Types.userPublicationName, function () {
 
 Meteor.publish(Favorites.userPublicationName, function () {
   return Favorites.collection.find();
+});
+
+Meteor.publish(Events.userPublicationName, function () {
+  return Events.collection.find();
 });
 
 // alanning:roles publication

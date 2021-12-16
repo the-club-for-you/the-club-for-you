@@ -22,10 +22,12 @@ class NavBar extends React.Component {
             <Menu.Item as={NavLink} activeClassName="active" exact to="/interests" key='interest' id='interests-page'>Interests</Menu.Item>],
           [<Menu.Item as={NavLink} activeClassName="active" exact to="/clubs/all" key='clubs' id="list-clubs">Clubs</Menu.Item>,
             <Menu.Item as={NavLink} activeClassName="active" exact to="/interests" key='interest' id="interests-page">Interests</Menu.Item>,
-            <Menu.Item as={NavLink} activeClassName="active" exact to="/favorites" key='favorites' id="favorites-page">Favorites</Menu.Item>]
+            <Menu.Item as={NavLink} activeClassName="active" exact to="/favorites" key='favorites' id="favorites-page">Favorites</Menu.Item>,
+            <Menu.Item as={NavLink} activeClassName="active" exact to="/events" key='events' id="events-page">Events</Menu.Item>]
         ) : ''}
         {Roles.userIsInRole(Meteor.userId(), 'club') ? (
-          [<Menu.Item as={NavLink} activeClassName="active" exact to="/myclubs" key='myclubs'>My Clubs</Menu.Item>]
+          [<Menu.Item as={NavLink} activeClassName="active" exact to="/myclubs" key='myclubs'>My Clubs</Menu.Item>,
+            <Menu.Item as={NavLink} activeClassName="active" exact to="/addevent" key='addevent'>Add Event</Menu.Item>]
         ) : ''}
         {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
           [<Menu.Item as={NavLink} activeClassName="active" exact to="/edit" key='edit' id='editClubs'>Edit Clubs</Menu.Item>,
