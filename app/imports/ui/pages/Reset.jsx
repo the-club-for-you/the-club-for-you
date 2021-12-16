@@ -24,7 +24,7 @@ class Reset extends React.Component {
       'findId', email,
       (err) => {
         if (err) {
-          swal('Error', 'No user exists', 'error');
+          swal('Error', 'No user found', 'error');
         } else {
           const token = Random.secret();
           Token.collection.insert({ email: email, token: token, time: new Date() });
