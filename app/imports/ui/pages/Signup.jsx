@@ -77,6 +77,9 @@ class Signup extends React.Component {
               </Message>
               <Message>Forget your password? Reset <Link to="/resetpassword" position="right" id={'reset-password'}>here</Link>
               </Message>
+              <Message>
+                <b>New Club Admins:</b> If you wish to register a club admin account, then please contact us at jingzhef@hawaii.edu, and we will help you set up your new club page.
+              </Message>
               <br/>
               {this.state.error === '' ? (
                 ''
