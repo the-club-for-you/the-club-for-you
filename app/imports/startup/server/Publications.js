@@ -38,10 +38,6 @@ Meteor.publish(Types.userPublicationName, function () {
   return Types.collection.find();
 });
 
-Meteor.publish(Favorites.userPublicationName, function () {
-  return Favorites.collection.find();
-});
-
 Meteor.publish(Events.userPublicationName, function () {
   return Events.collection.find();
 });

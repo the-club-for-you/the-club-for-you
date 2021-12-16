@@ -21,11 +21,11 @@ class FavoritesClubs extends React.Component {
     const favoriteIds = _.map(this.props.favorites, 'favorite');
 
     return (
-      <div className="background">
+      <div className="clubs-background">
         <Container>
           <br/>
-          <Header as={'h1'} textAlign="center" inverted>My Favorites Clubs</Header>
-          <Card.Group centered itemsPerRow={6}>
+          <Header style={ { fontSize: '400%' } } textAlign="center" inverted>My Favorites Clubs</Header>
+          <Card.Group centered itemsPerRow={5}>
             {_.filter(this.props.clubs, function (data) {
               return _.includes(favoriteIds, data._id);
             }).map((data) => <FavoriteClubCard key={data._id} club={data}

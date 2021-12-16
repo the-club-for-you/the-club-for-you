@@ -31,7 +31,7 @@ class ContactUs extends React.Component {
               <a target="_blank" href="https://the-club-for-you.github.io/" rel="noreferrer"> Our Home page</a>
             </Header>
             <p>The website is still under development, please provide any issues encounted or suggestions. Thanks for building the club community better :)</p>
-            <Button color='green' href="https://the-club-for-you.github.io/">Community Feedback(Coming Soon)</Button>
+            <Button color='green' href="https://forms.gle/QNDnx35H4zPpbf486">Community Feedback</Button>
           </div>
           <br/>
         </Container>

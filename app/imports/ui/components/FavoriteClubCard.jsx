@@ -55,7 +55,7 @@ class FavoriteClubCard extends React.Component {
               style={ { backgroundColor: `${labelColor(data, clubTypes)}`, color: 'white' } }
               as={ NavLink }
               exact
-              to={`/clubtype/${data}`}
+              to={`/clubs/${data}`}
             >
               {data}
             </Label>)}
