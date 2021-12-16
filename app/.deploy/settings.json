@@ -21,5 +21,13 @@
   "monti": {
     "appId": "PJY9H67dHxXezXwXc",
     "appSecret": "c6b1551c-cf55-4f56-82bb-31a927e53d1f"
+  },
+
+  "smtp": {
+    "isSecure": true,
+    "userName": "uhtheclubforyou",
+    "password": "uhtheclubforyou314",
+    "host": "smtp.gmail.com",
+    "port": 465
   }
 }
