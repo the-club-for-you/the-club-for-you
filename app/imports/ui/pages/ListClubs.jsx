@@ -179,7 +179,7 @@ class ListClubs extends React.Component {
           <Container>
             <Label.Group>
               {this.currentFilters(filterArr)}
-              <Label as={'a'} onClick={this.handleOpen}>
+              <Label as={'a'} onClick={this.handleOpen} id={'addFilter'}>
                 <Icon name={'plus circle'} />
                 Add Filter
               </Label>
@@ -201,6 +201,7 @@ class ListClubs extends React.Component {
                 }).map((data, index) => <Label
                   key={index}
                   horizontal
+                  id={data}
                   as={ NavLink }
                   exact
                   to={`/clubs/${this.changeFilter(filter, data)}`}

@@ -7,6 +7,7 @@ import { interests } from './interests.component';
 import { listClubsAdmin } from './listClubsAdmin.page.js';
 import { addClubPage } from './addclub.page';
 import { favorites } from './favorites.component';
+import { addEventPage } from './addEvent.page';
 
 /* global fixture:false, test:false */
 
@@ -14,6 +15,7 @@ import { favorites } from './favorites.component';
 const credentials = { username: 'john@foo.com', password: 'changeme' };
 const credentials2 = { username: 'admin@foo.com', password: 'changeme' };
 const credentials3 = { username: 'malialiu@hawaii.edu', password: 'm' };
+const credentials4 = { username: 'aikidoatuh@foo.com', password: 'changeme' };
 
 fixture('meteor-application-template-react localhost test with default db')
   .page('http://localhost:3000');
@@ -31,11 +33,12 @@ test('Test that signin and signout and contact page work', async (testController
   await signoutPage.isDisplayed(testController);
 });
 
-test('Test that list clubs page and search bar work.', async (testController) => {
+test('Test that list clubs page work.', async (testController) => {
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.isLoggedIn(testController, credentials.username);
   await navBar.gotoListClubPage(testController);
+  await listClubs.filter(testController);
   await listClubs.gotoSearchResult(testController);
   await listClubs.gotoClubInfoPage(testController);
   await navBar.logout(testController);
@@ -100,4 +103,15 @@ test('Test that sign up and reset password page work.', async (testController) =
   await testController.click('#login-dropdown');
   await testController.click('#login-dropdown-sign-up');
   await testController.click('#reset-password');
+});
+
+test('Test that event page work.', async (testController) => {
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, credentials4.username, credentials4.password);
+  await navBar.isLoggedIn(testController, credentials4.username);
+  await navBar.gotoAddEventPage(testController);
+  await addEventPage.addEvent(testController);
+  await navBar.gotoEventPage(testController);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
 });

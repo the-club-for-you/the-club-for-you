@@ -60,6 +60,14 @@ class NavBar {
   async gotoFavoritesPage(testController) {
     await testController.click('#favorites-page');
   }
+
+  async gotoEventPage(testController) {
+    await testController.click('#events-page');
+  }
+
+  async gotoAddEventPage(testController) {
+    await testController.click('#addEvent');
+  }
 }
 
 export const navBar = new NavBar();

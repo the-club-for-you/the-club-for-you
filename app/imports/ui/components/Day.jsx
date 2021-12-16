@@ -41,7 +41,7 @@ class Day extends React.Component {
 
     return (
       <Card as={NavLink} to={`/event/${date.getFullYear()}/${date.getMonth()}/${date.getDate()}`}>
-        <Card.Content>
+        <Card.Content id={`/event/${date.getFullYear()}/${date.getMonth()}/${date.getDate()}`}>
           <Header color={this.isMonth()}>{this.props.date.getDate()}  {this.isToday(today)}</Header>
         </Card.Content>
         <Card.Content extra>

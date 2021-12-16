@@ -55,17 +55,17 @@ class AddEvent extends React.Component {
           <Grid.Column>
             <br/>
             <Header style={ { fontSize: '400%' } } textAlign="center" inverted>Add an Event</Header>
-            <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} id='add-form'>
+            <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} id='addEvent-form'>
               <Segment>
                 <Form.Group widths={'equal'}>
-                  <SelectField name='club' label='Club'/>
-                  <TextField name='title' label='Short Title'/>
-                  <DateField name='isodate' label='Date'/>
+                  <SelectField name='club' label='Club' id='eventClub'/>
+                  <TextField name='title' label='Short Title' id='eventTitle'/>
+                  <DateField name='isodate' label='Date' id='eventDate'/>
                 </Form.Group>
                 <Form.Group widths={'equal'}>
-                  <LongTextField name='description' label='Description'/>
+                  <LongTextField name='description' label='Description' id='eventDescription'/>
                 </Form.Group>
-                <SubmitField value='Submit'/>
+                <SubmitField value='Submit' id='submit-addEvent'/>
                 <ErrorsField/>
               </Segment>
             </AutoForm>
