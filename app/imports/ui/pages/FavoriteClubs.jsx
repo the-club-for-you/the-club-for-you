@@ -24,7 +24,7 @@ class FavoritesClubs extends React.Component {
       <div className="clubs-background">
         <Container>
           <br/>
-          <Header style={ { fontSize: '400%' } } textAlign="center" inverted>My Favorites Clubs</Header>
+          <Header style={ { fontSize: '400%' } } textAlign="center" inverted>My Favorite Clubs</Header>
           <Card.Group centered itemsPerRow={5}>
             {_.filter(this.props.clubs, function (data) {
               return _.includes(favoriteIds, data._id);
