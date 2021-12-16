@@ -23,6 +23,10 @@ import Contact from '../pages/Contact';
 import ClubInfo from '../pages/ClubInfo';
 import ResetPassword from '../pages/ResetPassword';
 import Favorites from '../pages/FavoriteClubs';
+import Events from '../pages/Events';
+import Event from '../pages/Event';
+import AddEvent from '../pages/AddEvent';
+import EditEvent from '../pages/EditEvent';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -41,6 +45,8 @@ class App extends React.Component {
             <Route path="/interests" component={Interests}/>
             <Route path="/contact" component={Contact}/>
             <Route path="/favorites" component={Favorites}/>
+            <Route path="/events" component={Events}/>
+            <Route path="/event/:year/:month/:day" component={Event}/>
             <Route path="/clubsInfo/:_id" component={ClubInfo}/>
             <Route path="/reset-password/:_id" component={ResetPassword}/>
             <ProtectedRoute path="/list" component={ListClubs}/>
@@ -52,6 +58,8 @@ class App extends React.Component {
             <AdminProtectedRoute path="/admin" component={ListClubsAdmin}/>
             <ClubProtectedRoute path="/myclubs/edit/:_id" component={EditMyClub}/>
             <ClubProtectedRoute path="/myclubs" component={MyClubs}/>
+            <ClubProtectedRoute path="/addevent" component={AddEvent}/>
+            <ClubProtectedRoute path="/editevent/:_id" component={EditEvent}/>
             <Route component={NotFound}/>
           </Switch>
           <Footer/>

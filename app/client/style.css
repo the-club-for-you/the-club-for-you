@@ -68,3 +68,8 @@ h1{
   padding-bottom: 10%;
   color: white;
 }
+
+.calendarButton{
+  position: absolute;
+  top: 50%;
+}
